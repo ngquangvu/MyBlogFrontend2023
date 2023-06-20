@@ -1,15 +1,34 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
+import { Image, Picture } from "@astrojs/image/components";
+
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../consts";
+import logoImage from "../assets/ghost.png";
+
+const widths = [300, 300];
+const sizes = "(min-width: 30px) 3vw, 3vw";
 ---
 
 <header class="flex justify-between bg-slate-200 p-5">
-	<h2>
+	<h2 class="flex items-center">
+		<Picture
+			aspectRatio={1}
+			class="h-10 w-10 mr-2 object-cover"
+			src={logoImage}
+			widths={widths}
+			sizes={sizes}
+			loading="eager"
+			alt="Logo"
+		/>
 		{SITE_TITLE}
 	</h2>
 	<nav class="flex">
-		<HeaderLink class={'text-blue-500 underline'} href="/">Home</HeaderLink>
-		<HeaderLink class={'text-blue-500 underline'} href="/blog">Blog</HeaderLink>
-		<HeaderLink class={'text-blue-500 underline'} href="/about">About</HeaderLink>
+		<HeaderLink class={"text-blue-500 underline"} href="/">Home</HeaderLink>
+		<HeaderLink class={"text-blue-500 underline"} href="/blog">
+			Blog
+		</HeaderLink>
+		<HeaderLink class={"text-blue-500 underline"} href="/about">
+			About
+		</HeaderLink>
 	</nav>
 </header>
