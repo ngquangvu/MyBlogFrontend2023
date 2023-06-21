@@ -2,6 +2,11 @@
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
     "strictNullChecks": true,
-    "types": ["@astrojs/image/client"]
+    "types": ["@astrojs/image/client"],
+    // Alias `src` to `~`
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["src/*"]
+    }
   }
 }
