@@ -6,6 +6,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Splash from "../components/Splash.astro";
 import Intro from "~/components/Intro.astro";
 import Skill from "~/components/Skill.astro";
+import Usable from "~/components/Usable.astro";
+import Customer from "~/components/Customer.astro";
 ---
 
 <!DOCTYPE html>
@@ -21,8 +23,9 @@ import Skill from "~/components/Skill.astro";
 		<main class="py-20 flex flex-col gap-28">
 			<Intro />
 			<Skill />
-			<!-- <Customer />
-			<Showcase /> -->
+			<Usable />
+			<Customer />
+			<!--<Showcase /> -->
 		</main>
 		<Footer />
 	</body>

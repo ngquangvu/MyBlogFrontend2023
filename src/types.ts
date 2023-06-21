@@ -1,8 +1,13 @@
 
-export interface CompatibilityItem {
+export interface UsableItem {
     icon: string;
     title: string;
     url: string;
+}
+
+export interface CustomerItem {
+    icon: string;
+    title: string;
 }
 
 export interface FeatureItem {

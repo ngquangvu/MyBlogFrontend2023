@@ -1,0 +1,26 @@
+---
+import { Icon } from "astro-icon";
+import type { CustomerItem } from "~/types";
+
+export interface Props {
+    items: Array<CustomerItem>;
+    title: string;
+}
+
+const { items, title } = Astro.props;
+---
+
+<div class="w-full max-w-6xl space-y-2">
+    <div class="relative border border-default bg-offset px-6 pb-4 pt-8">
+        <ul class="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-6">
+            {
+                items.map((item) => (
+                    <li>
+                        <Icon class="h-20" name={item.icon} />
+                        <span class="hidden">{item.title}</span>
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
+</div>
