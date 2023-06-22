@@ -1,13 +1,73 @@
 ---
-const today = new Date();
+import { Icon } from "astro-icon";
+import type { FooterLink } from "~/types";
+import Starfield from "~/components/Starfield.astro";
+
+const links: Array<FooterLink> = [
+	{
+		url: "https://github.com/ngquangvu",
+		description: "View source on GitHub",
+		icon: "fa-brands:github",
+	},
+	{
+		url: "https://facebook.com",
+		description: "Facebook",
+		icon: "fa-brands:facebook",
+	},
+	{
+		url: "https://instagram.com",
+		description: "Instagram",
+		icon: "fa-brands:instagram",
+	},
+	{
+		url: "https://linkedin.com",
+		description: "Linkedin",
+		icon: "fa-brands:linkedin",
+	},
+];
 ---
 
-<footer class="bg-slate-200">
-	&copy; {today.getFullYear()} YOUR NAME HERE. All rights reserved.
+<footer class="w-full relative h-full bg-black">
+	<Starfield id="starfieldFooter" canvas_id="starfieldFooterCanvas" />
+	<div class="relative w-[90%] m-auto flex justify-center py-20">
+		<!-- Card -->
+		<div class="rounded-lg border border-default bg-gray-200">
+			<div class="text-lg border-b border-gray-400 px-5 py-4 text-center">
+				Nguyễn Quang Vũ
+			</div>
+			<div class="flex flex-col gap-3 px-5 py-4">
+				<a href="#" class="flex hover:opacity-60">
+					<Icon
+						class="h-6 w-6 text-gray-800 mr-1.5"
+						name="ic:baseline-phone"
+					/>
+					+84 90 3306601
+				</a>
+				<a href="#" class="flex hover:opacity-60">
+					<Icon
+						class="h-6 w-6 text-gray-800 mr-1.5"
+						name="ic:outline-mail"
+					/>
+					nguyenquangvu.dev@gmail.com
+				</a>
+				<ul class="w-full flex justify-center gap-4">
+					{
+						links.map((link) => (
+							<li>
+								<a
+									class="flex h-12 w-12 hover:opacity-60 items-center justify-center p-2"
+									href={link.url}
+								>
+									<span class="sr-only">
+										{link.description}
+									</span>
+									<Icon class="h-full" name={link.icon} />
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</div>
+		</div>
+	</div>
 </footer>
-<style>
-	footer {
-		padding: 25px;
-		text-align: center;
-	}
-</style>
