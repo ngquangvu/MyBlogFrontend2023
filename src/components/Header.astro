@@ -8,11 +8,11 @@ const widths = [300, 300];
 const sizes = "(min-width: 30px) 3vw, 3vw";
 ---
 
-<header class="flex justify-between bg-slate-200 p-5">
+<header class="absolute bottom-0 z-10 w-full flex justify-between p-5">
 	<h2 class="flex items-center">
 		<Picture
 			aspectRatio={1}
-			class="h-10 w-10 mr-2 object-cover"
+			class="h-10 w-10 mr-2 object-cover hover:opacity-80"
 			src={logoImage}
 			widths={widths}
 			sizes={sizes}
@@ -20,12 +20,23 @@ const sizes = "(min-width: 30px) 3vw, 3vw";
 			alt="Logo"
 		/>
 	</h2>
-	<nav class="flex">
-		<HeaderLink class={"text-blue-500 underline"} href="/">Home</HeaderLink>
-		<HeaderLink class={"text-blue-500 underline"} href="/blog">
+	<nav class="flex gap-4">
+		<HeaderLink
+			class={"text-white hover:animate-wiggle hover:opacity-80"}
+			href="/"
+		>
+			Home
+		</HeaderLink>
+		<HeaderLink
+			class={"text-white hover:animate-wiggle hover:opacity-80"}
+			href="/blog"
+		>
 			Blog
 		</HeaderLink>
-		<HeaderLink class={"text-blue-500 underline"} href="/about">
+		<HeaderLink
+			class={"text-white hover:animate-wiggle hover:opacity-80"}
+			href="/about"
+		>
 			About
 		</HeaderLink>
 	</nav>
