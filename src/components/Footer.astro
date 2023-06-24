@@ -2,6 +2,7 @@
 import { Icon } from "astro-icon";
 import type { FooterLink } from "~/types";
 import Starfield from "~/components/Starfield.astro";
+import Contact from "./Contact.astro";
 
 const links: Array<FooterLink> = [
 	{
@@ -31,7 +32,7 @@ const links: Array<FooterLink> = [
 	<Starfield id="starfieldFooter" canvas_id="starfieldFooterCanvas" />
 	<div class="relative w-[90%] m-auto flex justify-center py-20">
 		<!-- Card -->
-		<div class="rounded-lg border border-default bg-gray-200">
+		<!-- <div class="rounded-lg border border-default bg-gray-200">
 			<div class="text-lg border-b border-gray-400 px-5 py-4 text-center">
 				Nguyễn Quang Vũ
 			</div>
@@ -68,6 +69,8 @@ const links: Array<FooterLink> = [
 					}
 				</ul>
 			</div>
-		</div>
+		</div> -->
+
+		<Contact />
 	</div>
 </footer>
