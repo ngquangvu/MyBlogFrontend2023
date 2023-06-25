@@ -1,3 +1,3 @@
-# MyBlog LP
+# MyBlog Frontend
 
 Astro + Tailwind
