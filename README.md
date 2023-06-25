@@ -1,1 +1,3 @@
-# Astro LP
+# MyBlog LP
+
+Astro + Tailwind
