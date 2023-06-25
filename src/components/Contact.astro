@@ -32,10 +32,17 @@ import { Icon } from "astro-icon";
                     id sem. Arcu sed malesuada et magna.
                 </p>
                 <dl class="mt-10 space-y-4 text-base leading-7 text-gray-300">
-                    <div class="flex gap-x-4">
+                    <div class="flex gap-x-2">
+                        <dt class="flex-none">
+                            <span class="sr-only">Name</span>
+                            <Icon name="ic:outline-person" class="h-7 w-7" />
+                        </dt>
+                        <dd>Nguyen Quang Vu</dd>
+                    </div>
+                    <div class="flex gap-x-3">
                         <dt class="flex-none">
                             <span class="sr-only">Address</span>
-                            <Icon name="building" class="h-7 w-7" />
+                            <Icon name="octicon:location-16" class="h-6 w-6" />
                         </dt>
                         <dd>
                             District 1
@@ -43,10 +50,10 @@ import { Icon } from "astro-icon";
                             Ho Chi Minh city, Vietnam
                         </dd>
                     </div>
-                    <div class="flex gap-x-4">
+                    <div class="flex gap-x-2">
                         <dt class="flex-none">
                             <span class="sr-only">Telephone</span>
-                            <Icon name="phone" class="h-7 w-7" />
+                            <Icon name="ic:outline-phone" class="h-7 w-7" />
                         </dt>
                         <dd>
                             <a
@@ -57,10 +64,10 @@ import { Icon } from "astro-icon";
                             </a>
                         </dd>
                     </div>
-                    <div class="flex gap-x-4">
+                    <div class="flex gap-x-2">
                         <dt class="flex-none">
                             <span class="sr-only">Email</span>
-                            <Icon name="mail" class="h-7 w-7" />
+                            <Icon name="ic:outline-mail" class="h-7 w-7" />
                         </dt>
                         <dd>
                             <a
@@ -165,7 +172,7 @@ import { Icon } from "astro-icon";
                 <div class="mt-8 flex justify-end">
                     <button
                         type="submit"
-                        class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                        class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
                     >
                         Send message
                     </button>
