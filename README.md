@@ -1,3 +1,3 @@
 # MyBlog Frontend
 
-Astro + Tailwind
+Astro + Tailwind + Netlify
