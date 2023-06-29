@@ -3,41 +3,47 @@ import { Image, Picture } from "@astrojs/image/components";
 
 import HeaderLink from "./HeaderLink.astro";
 import logoImage from "../assets/ghost.png";
+import type { NavItem } from "~/types";
+import { Icon } from "astro-icon";
 
-const widths = [300, 300];
-const sizes = "(min-width: 30px) 3vw, 3vw";
+const links: Array<NavItem> = [
+	{
+		title: "Blog",
+		url: "/blog",
+	},
+	{
+		title: "Notion",
+		url: "https://ngquangvu.notion.site/e7eed0bfbb5c47b7a6b829a0907b1df5?v=baac0c7edb1f44d382d0354239a3a5b5&pvs=4",
+	},
+	{
+		title: "Contact",
+		url: "#contact",
+	},
+	{
+		title: "About",
+		url: "/about",
+	},
+];
 ---
 
-<header class="absolute bottom-0 z-10 w-full flex justify-between p-5">
+<header
+	class="absolute bottom-0 z-10 w-full flex justify-between py-5 px-5 md:px-9"
+>
 	<h2 class="flex items-center">
-		<Picture
-			aspectRatio={1}
-			class="h-10 w-10 mr-2 object-cover hover:opacity-80"
-			src={logoImage}
-			widths={widths}
-			sizes={sizes}
-			loading="eager"
-			alt="Logo"
-		/>
+		<Icon name="fa-brands:vimeo-v" class="h-10 w-10 text-white" />
 	</h2>
-	<nav class="flex gap-6">
-		<HeaderLink
-			class={"self-center text-white hover:animate-wiggle hover:opacity-80"}
-			href="/"
-		>
-			Home
-		</HeaderLink>
-		<HeaderLink
-			class={"self-center text-white hover:animate-wiggle hover:opacity-80"}
-			href="/blog"
-		>
-			Blog
-		</HeaderLink>
-		<HeaderLink
-			class={"self-center text-white hover:animate-wiggle hover:opacity-80"}
-			href="/about"
-		>
-			About
-		</HeaderLink>
+	<nav class="flex gap-8">
+		{
+			links.map((link) => (
+				<HeaderLink
+					class={
+						"text-lg self-center text-white hover:animate-wiggle hover:opacity-80"
+					}
+					href={link.url}
+				>
+					{link.title}
+				</HeaderLink>
+			))
+		}
 	</nav>
 </header>
