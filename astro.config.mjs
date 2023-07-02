@@ -4,6 +4,7 @@ import tailwind from "@astrojs/tailwind";
 import image from "@astrojs/image";
 import sitemap from "@astrojs/sitemap";
 import netlify from "@astrojs/netlify/functions";
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,6 +12,7 @@ export default defineConfig({
   integrations: [
     mdx(),
     sitemap(),
+    react(),
     tailwind({
       config: {
         applyBaseStyles: false,
