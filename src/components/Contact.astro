@@ -13,12 +13,12 @@ const links: Array<FooterLink> = [
         icon: "fa-brands:github",
     },
     {
-        url: "https://facebook.com",
+        url: "https://www.facebook.com/valkyzone",
         description: "Facebook",
         icon: "fa-brands:facebook",
     },
     {
-        url: "https://instagram.com",
+        url: "https://www.instagram.com/ngquangvu/",
         description: "Instagram",
         icon: "fa-brands:instagram",
     },
@@ -30,10 +30,13 @@ const links: Array<FooterLink> = [
 ];
 ---
 
-<div class="relative isolate bg-black border rounded-lg border-gray-400">
-    <div class="bg-white p-2">
+<div
+    id="contact"
+    class="relative isolate bg-black border rounded-lg border-gray-400"
+>
+    <!-- <div class="bg-white p-2">
         <ContactForm client:visible contactUrl={CONTACT_API} />
-    </div>
+    </div> -->
 
     <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div
@@ -61,9 +64,8 @@ const links: Array<FooterLink> = [
                     Get in touch
                 </h2>
                 <p class="mt-6 text-base leading-8 text-gray-300">
-                    Proin volutpat consequat porttitor cras nullam gravida at.
-                    Orci molestie a eu arcu. Sed ut tincidunt integer elementum
-                    id sem. Arcu sed malesuada et magna.
+                    Feel free to reach out to me using the contact information
+                    below or by filling out the form
                 </p>
                 <dl class="mt-10 space-y-4 text-base leading-7 text-gray-300">
                     <div class="flex gap-x-2 items-center">
@@ -86,11 +88,8 @@ const links: Array<FooterLink> = [
                             <Icon name="ic:outline-phone" class="h-6 w-6" />
                         </dt>
                         <dd>
-                            <a
-                                class="hover:text-white"
-                                href="tel:+84 903306600"
-                            >
-                                +84 903306600
+                            <a class="hover:text-white" href="tel:+84903306600">
+                                +84 90 330 6600
                             </a>
                         </dd>
                     </div>
@@ -104,7 +103,7 @@ const links: Array<FooterLink> = [
                                 class="hover:text-white"
                                 href="mailto:hello@example.com"
                             >
-                                nguyenquangvu.dev@gmail.com
+                                nguyenquangvu.work@gmail.com
                             </a>
                         </dd>
                     </div>

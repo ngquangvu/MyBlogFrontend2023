@@ -3,81 +3,142 @@ import type { UsableItem } from "~/types";
 import ContentSection from "./ContentSection.astro";
 import UsableList from "./UsableList.astro";
 
+const languages: Array<UsableItem> = [
+    {
+        title: "Javascript",
+        icon: "teenyicons:javascript-solid",
+        url: "",
+    },
+    {
+        title: "Typescript",
+        icon: "teenyicons:typescript-solid",
+        url: "",
+    },
+    {
+        title: "PHP",
+        icon: "simple-icons:php",
+        url: "",
+    },
+    {
+        title: "C Sharp",
+        icon: "simple-icons:csharp",
+        url: "",
+    },
+    {
+        title: "SQL, MySQL, Oracle",
+        icon: "mdi:sql-query",
+        url: "",
+    },
+    {
+        title: "MongoDB",
+        icon: "simple-icons:mongodb",
+        url: "",
+    },
+];
+
 const frameworks: Array<UsableItem> = [
     {
         title: "React",
-        icon: "frameworks/react",
-        url: "https://reactjs.org/",
+        icon: "teenyicons:react-outline",
+        url: "",
     },
     {
-        title: "Preact",
-        icon: "frameworks/preact",
-        url: "https://preactjs.com/",
+        title: "Laravel",
+        icon: "teenyicons:laravel-solid",
+        url: "",
     },
     {
-        title: "Svelte",
-        icon: "frameworks/svelte",
-        url: "https://svelte.dev/",
+        title: "Unity",
+        icon: "simple-icons:unity",
+        url: "",
     },
     {
         title: "Vue",
-        icon: "frameworks/vue",
-        url: "https://vuejs.org/",
+        icon: "teenyicons:vue-solid",
+        url: "",
     },
     {
-        title: "Solid",
-        icon: "frameworks/solid",
-        url: "https://www.solidjs.com/",
+        title: "NestJS",
+        icon: "simple-icons:nestjs",
+        url: "",
     },
     {
-        title: "Lit",
-        icon: "frameworks/lit",
-        url: "https://lit.dev/",
+        title: "Wordpress",
+        icon: "bi:wordpress",
+        url: "",
     },
 ];
 
 const platforms: Array<UsableItem> = [
     {
-        title: "Netlify",
-        icon: "platforms/netlify",
-        url: "https://www.netlify.com/",
+        title: "HTML",
+        icon: "akar-icons:html-fill",
+        url: "",
     },
     {
-        title: "Vercel",
-        icon: "platforms/vercel",
-        url: "https://vercel.com/",
+        title: "CSS, SCSS",
+        icon: "akar-icons:css-fill",
+        url: "",
     },
     {
-        title: "Cloudflare",
-        icon: "fa-brands:cloudflare",
-        url: "https://pages.cloudflare.com/",
+        title: "Astro",
+        icon: "simple-icons:astro",
+        url: "",
     },
     {
-        title: "Render",
-        icon: "platforms/render",
-        url: "https://render.com/",
+        title: "Gatsby",
+        icon: "simple-icons:gatsby",
+        url: "",
+    },
+    {
+        title: "Tailwind",
+        icon: "teenyicons:tailwind-solid",
+        url: "",
+    },
+    {
+        title: "MUI",
+        icon: "simple-icons:mui",
+        url: "",
+    },
+    {
+        title: "Docker",
+        icon: "simple-icons:docker",
+        url: "",
     },
     {
         title: "GitHub",
         icon: "fa-brands:github",
-        url: "https://pages.github.com/",
+        url: "",
     },
     {
-        title: "GitLab",
-        icon: "fa-brands:gitlab",
-        url: "https://docs.gitlab.com/ee/user/project/pages/",
+        title: "SVN",
+        icon: "file-icons:svn",
+        url: "",
+    },
+    {
+        title: "Salesforce",
+        icon: "fa-brands:salesforce",
+        url: "",
+    },
+    {
+        title: "Electron",
+        icon: "simple-icons:electron",
+        url: "",
+    },
+    {
+        title: "Android",
+        icon: "ant-design:android-filled",
+        url: "",
     },
 ];
 ---
 
-<ContentSection title="Usable" id="usable">
+<ContentSection title="What I do" id="usable">
     <Fragment slot="lead">
-        Astro <span class="text-primary">plays nice</span>. Bring your own UI{
-            " "
-        }
-        <span class="text-primary">framework</span>
-        and deploy to your favorite <span class="text-primary">platform</span>.
+        The programming languages, frameworks, and other tools that I can
+        proficiently utilize
     </Fragment>
-    <UsableList items={frameworks} title="Frameworks" />
-    <UsableList items={platforms} title="Platforms" />
+    <UsableList items={languages} title="Languages & Databases" />
+    <UsableList items={frameworks} title="Library & Frameworks" />
+    <UsableList items={platforms} title="Others" />
 </ContentSection>

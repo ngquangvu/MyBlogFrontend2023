@@ -23,13 +23,26 @@ const { items, title } = Astro.props;
             {
                 items.map((item) => (
                     <li>
-                        <a
-                            class="flex flex-col items-center gap-2"
-                            href={item.url}
-                        >
-                            <Icon class="h-12" name={item.icon} />
-                            <span>{item.title}</span>
-                        </a>
+                        {item.url != "" ? (
+                            <a
+                                class="flex flex-col items-center gap-2"
+                                href={item.url}
+                            >
+                                <Icon
+                                    class="h-12 text-gray-800"
+                                    name={item.icon}
+                                />
+                                <span>{item.title}</span>
+                            </a>
+                        ) : (
+                            <div class="flex flex-col items-center gap-2">
+                                <Icon
+                                    class="h-12 text-gray-800"
+                                    name={item.icon}
+                                />
+                                <span>{item.title}</span>
+                            </div>
+                        )}
                     </li>
                 ))
             }

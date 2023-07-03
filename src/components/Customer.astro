@@ -5,39 +5,32 @@ import CustomerList from "./CustomerList.astro";
 
 const frameworks: Array<CustomerItem> = [
     {
-        title: "React",
-        icon: "frameworks/react",
+        title: "Hitachi",
+        icon: "customer/Hitachi",
     },
     {
-        title: "Preact",
-        icon: "frameworks/preact",
+        title: "KDDI",
+        icon: "customer/KDDI",
     },
     {
-        title: "Svelte",
-        icon: "frameworks/svelte",
+        title: "関西電力",
+        icon: "customer/KansaiDenryoku",
     },
     {
-        title: "Vue",
-        icon: "frameworks/vue",
+        title: "Xperia",
+        icon: "customer/Xperia",
     },
     {
-        title: "Solid",
-        icon: "frameworks/solid",
-    },
-    {
-        title: "Lit",
-        icon: "frameworks/lit",
+        title: "KS Solutions",
+        icon: "customer/KSS",
     },
 ];
 ---
 
 <ContentSection title="Customers" id="customer">
     <Fragment slot="lead">
-        Astro <span class="text-primary">plays nice</span>. Bring your own UI{
-            " "
-        }
-        <span class="text-primary">framework</span>
-        and deploy to your favorite <span class="text-primary">platform</span>.
+        Many years of experience working with clients from prominent companies
+        based in Japan
     </Fragment>
     <CustomerList items={frameworks} title="Customers" />
 </ContentSection>
