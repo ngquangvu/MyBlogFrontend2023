@@ -2,15 +2,10 @@
 import { Icon } from "astro-icon";
 import ContentSection from "~/components/ContentSection.astro";
 const NOTION_URL = await import.meta.env.NOTION_URL;
-
-const firstWorkedDate = new Date("3/8/2018");
-const today = new Date();
-const diffTime = Math.abs(today - firstWorkedDate);
-const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-const workedYear = (diffDays / 365).toFixed(1);
+const { workedYear } = Astro.props;
 ---
 
-<ContentSection title="Just ship less" id="intro">
+<ContentSection title="Exploring My Journey" id="intro">
     <Fragment slot="lead">
         "Hi, I'm Quang Vu, a senior full-stack developer with {workedYear} years
         of experience. Let's collaborate to create amazing web applications together!"

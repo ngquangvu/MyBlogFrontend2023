@@ -8,6 +8,12 @@ import Intro from "~/components/Intro.astro";
 import Skill from "~/components/Skill.astro";
 import Usable from "~/components/Usable.astro";
 import Customer from "~/components/Customer.astro";
+
+const firstWorkedDate = new Date("3/8/2018");
+const today = new Date();
+const diffTime = Math.abs(today - firstWorkedDate);
+const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+const workedYear = (diffDays / 365).toFixed(1);
 ---
 
 <!DOCTYPE html>
@@ -23,8 +29,8 @@ import Customer from "~/components/Customer.astro";
 			<Splash />
 		</div>
 		<main class="py-20 px-4 md:px-8 flex flex-col space-y-28">
-			<Intro />
-			<Skill />
+			<Intro workedYear={workedYear} />
+			<Skill workedYear={workedYear} />
 			<Usable />
 			<Customer />
 			<!--<Showcase /> -->

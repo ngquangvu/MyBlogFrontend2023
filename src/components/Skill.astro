@@ -2,6 +2,7 @@
 import { Icon } from "astro-icon";
 import ContentSection from "~/components/ContentSection.astro";
 import type { FeatureItem } from "~/types";
+const { workedYear } = Astro.props;
 
 const skills: Array<FeatureItem> = [
     {
@@ -23,9 +24,11 @@ const skills: Array<FeatureItem> = [
         icon: "unity",
     },
     {
-        title: "Leader",
+        title: "Leadership",
         description:
-            "Guiding and directing a development team to deliver high-quality software solutions",
+            "Take responsibility as a leader for " +
+            (workedYear - 2) +
+            " years, guiding and directing a development team to deliver high-quality software solutions",
         icon: "leader",
     },
     {
@@ -35,7 +38,7 @@ const skills: Array<FeatureItem> = [
         icon: "ri:empathize-line",
     },
     {
-        title: "Sociable",
+        title: "Sociability",
         description:
             "Building strong relationships, promotes collaboration, and creates a positive work environment through effective communication",
         icon: "mdi:account-group",
