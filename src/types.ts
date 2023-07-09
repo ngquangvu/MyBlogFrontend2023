@@ -6,8 +6,9 @@ export interface UsableItem {
 }
 
 export interface CustomerItem {
-    icon: string;
     title: string;
+    icon: string;
+    url: string
 }
 
 export interface FeatureItem {

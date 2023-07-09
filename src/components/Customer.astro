@@ -3,26 +3,31 @@ import type { CustomerItem } from "~/types";
 import ContentSection from "./ContentSection.astro";
 import CustomerList from "./CustomerList.astro";
 
-const frameworks: Array<CustomerItem> = [
+const customers: Array<CustomerItem> = [
     {
         title: "Hitachi",
         icon: "customer/Hitachi",
+        url: "https://www.hitachi-systems-ps.co.jp/",
     },
     {
         title: "KDDI",
         icon: "customer/KDDI",
+        url: "https://www.kddi.com/",
     },
     {
         title: "関西電力",
         icon: "customer/KansaiDenryoku",
+        url: "https://www.kepco.co.jp/",
     },
     {
         title: "Xperia",
         icon: "customer/Xperia",
+        url: "https://www.sony-asia.com/smartphones",
     },
     {
         title: "KS Solutions",
         icon: "customer/KSS",
+        url: "http://ks-sol.jp/20190401.html",
     },
 ];
 ---
@@ -32,5 +37,5 @@ const frameworks: Array<CustomerItem> = [
         Many years of experience working with clients from prominent companies
         based in Japan
     </Fragment>
-    <CustomerList items={frameworks} title="Customers" />
+    <CustomerList items={customers} title="Customers" />
 </ContentSection>

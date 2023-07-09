@@ -18,8 +18,14 @@ const { items, title } = Astro.props;
             {
                 items.map((item) => (
                     <li class="px-2 md:px-5 flex justify-center">
-                        <Icon class="h-20" name={item.icon} />
-                        <span class="hidden">{item.title}</span>
+                        <a
+                            class="flex justify-center h-20 w-full hover:opacity-80 hover:scale-105 transition-all duration-150"
+                            target="_blank"
+                            href={item.url}
+                        >
+                            <Icon class="" name={item.icon} />
+                            <span class="hidden">{item.title}</span>
+                        </a>
                     </li>
                 ))
             }
