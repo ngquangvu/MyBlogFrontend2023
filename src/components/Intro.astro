@@ -6,25 +6,25 @@ const { workedYear } = Astro.props;
 ---
 
 <ContentSection title="Exploring My Journey" id="intro">
-    <Fragment slot="lead">
-        "Hi, I'm Quang Vu, a senior full-stack developer with {workedYear} years
-        of experience. Let's collaborate to create amazing web applications together!"
-    </Fragment>
-    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        <a
-            href="/"
-            class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
-        >
-            <Icon name="simple-icons:blogger" class="h-8 text-gray-800" />
-            <span>Read my Blogs (developing)</span>
-        </a>
-        <a
-            href={"https://ngquangvu.notion.site/e7eed0bfbb5c47b7a6b829a0907b1df5?v=baac0c7edb1f44d382d0354239a3a5b5&pvs=4"}
-            target="_blank"
-            class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
-        >
-            <Icon name="simple-icons:notion" class="h-8 text-gray-800" />
-            <span>Read my Notion</span>
-        </a>
-    </div>
+  <Fragment slot="lead">
+    "Hi, I'm Quang Vu, a senior full-stack developer with {workedYear} years of experience.
+    Let's collaborate to create amazing web applications together!"
+  </Fragment>
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+    <a
+      href="/"
+      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
+    >
+      <Icon name="simple-icons:blogger" class="h-8 text-gray-800" />
+      <span>Read my Blogs (🪧)</span>
+    </a>
+    <a
+      href={"https://ngquangvu.notion.site/e7eed0bfbb5c47b7a6b829a0907b1df5?v=baac0c7edb1f44d382d0354239a3a5b5&pvs=4"}
+      target="_blank"
+      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
+    >
+      <Icon name="simple-icons:notion" class="h-8 text-gray-800" />
+      <span>Read my Notion</span>
+    </a>
+  </div>
 </ContentSection>

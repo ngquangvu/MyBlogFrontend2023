@@ -21,6 +21,7 @@ export interface FooterLink {
     description: string;
     icon: string;
     url: string;
+    disable?: boolean;
 }
 
 export interface NavItem {

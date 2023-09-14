@@ -11,21 +11,25 @@ const links: Array<FooterLink> = [
     url: "https://github.com/ngquangvu",
     description: "View source on GitHub",
     icon: "fa-brands:github",
+    disable: false,
   },
   {
     url: "https://www.facebook.com/valkyzone",
     description: "Facebook",
     icon: "fa-brands:facebook",
+    disable: false,
   },
   {
     url: "https://www.instagram.com/ngquangvu/",
     description: "Instagram",
     icon: "fa-brands:instagram",
+    disable: false,
   },
   {
     url: "https://linkedin.com",
     description: "Linkedin",
     icon: "fa-brands:linkedin",
+    disable: true,
   },
 ];
 ---
@@ -114,8 +118,12 @@ const links: Array<FooterLink> = [
             links.map((link) => (
               <li>
                 <a
-                  class="flex h-12 w-12 hover:opacity-60 items-center justify-center p-2"
+                  class={`flex h-12 w-12 hover:opacity-60 items-center justify-center p-2 ${
+                    link.disable &&
+                    "cursor-default hover:opacity-100 pointer-events-none opacity-50"
+                  }`}
                   href={link.url}
+                  target="_blank"
                 >
                   <span class="sr-only">{link.description}</span>
                   <Icon class="h-full text-white" name={link.icon} />
@@ -217,7 +225,7 @@ const links: Array<FooterLink> = [
         <div class="mt-8 flex justify-end">
           <button
             type="submit"
-            class="border-2 border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white duration-500 px-3.5 py-2.5 text-center text-sm font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+            class="pointer-events-none border-2 opacity-60 border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white duration-500 px-3.5 py-2.5 text-center text-sm font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
           >
             Send message
           </button>
