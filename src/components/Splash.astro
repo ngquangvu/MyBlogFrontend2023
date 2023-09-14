@@ -11,58 +11,56 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
 ---
 
 <section class="relative h-screen min-h-[500px] bg-black">
-    <Starfield id="starfield" canvas_id="starfieldCanvas" />
-    <GitHubCorner />
-    <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
-        <HeroImage />
-    </div>
-    <div class="relative flex justify-center items-center h-full p-2 md:p-20">
-        <h2
-            class="flex flex-col gap-2 sm:gap-4 sm:self-auto sm:justify-self-end"
-        >
-            <div
-                class="text-5xl md:text-7xl gradient-text text-center font-extrabold tracking-tighter"
-            >
-                The best view comes after the hardest climb
-            </div>
-        </h2>
-    </div>
+  <Starfield id="starfield" canvas_id="starfieldCanvas" />
+  <GitHubCorner />
+  <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
+    <HeroImage />
+  </div>
+  <div class="relative flex justify-center items-center h-full p-2 md:p-20">
+    <h2 class="flex flex-col gap-2 sm:gap-4 sm:self-auto sm:justify-self-end">
+      <div
+        class="text-4xl md:text-6xl 2xl:text-7xl gradient-text text-center font-extrabold tracking-tighter px-1"
+      >
+        The best view comes after the hardest climb
+      </div>
+    </h2>
+  </div>
 </section>
 
 <noscript>
-    <style>
-        #splash-bg-fallback {
-            display: block;
-        }
-    </style>
+  <style>
+    #splash-bg-fallback {
+      display: block;
+    }
+  </style>
 </noscript>
 
 <style>
-    @keyframes float {
-        0% {
-            transform: translate3d(0, 0, 0);
-        }
-
-        100% {
-            transform: translate3d(0, 30px, 0);
-        }
+  @keyframes float {
+    0% {
+      transform: translate3d(0, 0, 0);
     }
 
+    100% {
+      transform: translate3d(0, 30px, 0);
+    }
+  }
+
+  #astronaut {
+    animation: float linear 2.5s infinite alternate;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
     #astronaut {
-        animation: float linear 2.5s infinite alternate;
+      @apply animate-none;
     }
 
-    @media (prefers-reduced-motion: reduce) {
-        #astronaut {
-            @apply animate-none;
-        }
-
-        :global(#starfield) {
-            @apply hidden;
-        }
-
-        #splash-bg-fallback {
-            @apply block;
-        }
+    :global(#starfield) {
+      @apply hidden;
     }
+
+    #splash-bg-fallback {
+      @apply block;
+    }
+  }
 </style>
