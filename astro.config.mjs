@@ -9,7 +9,7 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "http://quangvu.blog/",
+  site: "https://quangvu.blog/",
   integrations: [
     astroI18next(),
     mdx(),
@@ -18,7 +18,6 @@ export default defineConfig({
         locales: {
           en: "en",
           ja: "ja",
-          vi: "vi",
         },
       },
     }),
