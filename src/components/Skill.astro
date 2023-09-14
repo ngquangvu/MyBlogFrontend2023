@@ -5,69 +5,69 @@ import type { FeatureItem } from "~/types";
 const { workedYear } = Astro.props;
 
 const skills: Array<FeatureItem> = [
-    {
-        title: "Frontend Developer",
-        description:
-            "Specializing in HTML, CSS, and JavaScript, with expertise in frameworks for creating dynamic and responsive web applications",
-        icon: "clarity:command-line",
-    },
-    {
-        title: "Backend Developer",
-        description:
-            "Building and maintaining the server-side logic of web applications, handling data processing and system integration",
-        icon: "clarity:command-outline-badged",
-    },
-    {
-        title: "Unity Developer",
-        description:
-            "Specializing in creating and developing applications and games using the Unity game engine",
-        icon: "unity",
-    },
-    {
-        title: "Leadership",
-        description:
-            "Take responsibility as a leader for " +
-            (workedYear - 2).toFixed(1) +
-            " years, guiding and directing a development team to deliver high-quality software solutions",
-        icon: "leader",
-    },
-    {
-        title: "Language",
-        description:
-            "Proficient in English and Japanese (JLPT N3) for effective communication in both languages",
-        icon: "cil:language",
-    },
-    {
-        title: "Enthusiasm",
-        description:
-            "Igniting and empowering a team to deliver exceptional software solutions with passion and drive",
-        icon: "ri:empathize-line",
-    },
-    {
-        title: "Sociability",
-        description:
-            "Building strong relationships, promotes collaboration, and creates a positive work environment through effective communication",
-        icon: "mdi:account-group",
-    },
+  {
+    title: "Frontend Developer",
+    description:
+      "Specializing in HTML, CSS, and JavaScript, with expertise in frameworks for creating dynamic and responsive web applications",
+    icon: "clarity:command-line",
+  },
+  {
+    title: "Backend Developer",
+    description:
+      "Building and maintaining the server-side logic of web applications, handling data processing and system integration",
+    icon: "clarity:command-outline-badged",
+  },
+  {
+    title: "Unity Developer",
+    description:
+      "Specializing in creating and developing applications and games using the Unity game engine",
+    icon: "unity",
+  },
+  {
+    title: "Leadership",
+    description:
+      "Take responsibility as a leader for " +
+      (workedYear - 2).toFixed(1) +
+      " years, guiding and directing a development team to deliver high-quality software solutions",
+    icon: "leader",
+  },
+  {
+    title: "Language",
+    description:
+      "Proficient in English and Japanese (JLPT N3) for effective communication in both languages",
+    icon: "cil:language",
+  },
+  {
+    title: "Enthusiasm",
+    description:
+      "Igniting and empowering a team to deliver exceptional software solutions with passion and drive",
+    icon: "ri:empathize-line",
+  },
+  {
+    title: "Sociability",
+    description:
+      "Building strong relationships, promotes collaboration, and creates a positive work environment through effective communication",
+    icon: "mdi:account-group",
+  },
 ];
 ---
 
 <ContentSection title="Skills" id="skills">
-    <Fragment slot="lead">
-        After investing significant time in learning and working, I have
-        acquired and nurtured essential skills
-    </Fragment>
-    <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {
-            skills.map(({ title, description, icon }) => (
-                <li class="flex flex-col items-center gap-4 border border-default bg-gray-50 p-6">
-                    <div class="h-16 w-16 rounded-full border-2 border-current p-3">
-                        <Icon name={icon} />
-                    </div>
-                    <p class="text-center font-extrabold text-xl">{title}</p>
-                    <p class="text-center text-offset text-sm">{description}</p>
-                </li>
-            ))
-        }
-    </ul>
+  <Fragment slot="lead">
+    After investing significant time in learning and working, I have acquired
+    and nurtured essential skills
+  </Fragment>
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {
+      skills.map(({ title, description, icon }) => (
+        <li class="flex flex-col items-center gap-4 border border-default bg-gray-50 p-6 -mt-[1px] -ml-[1px]">
+          <div class="h-16 w-16 rounded-full border-2 border-current p-3">
+            <Icon name={icon} />
+          </div>
+          <p class="text-center font-extrabold text-xl">{title}</p>
+          <p class="text-center text-offset text-sm">{description}</p>
+        </li>
+      ))
+    }
+  </ul>
 </ContentSection>
