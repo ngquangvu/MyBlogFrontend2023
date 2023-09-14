@@ -9,11 +9,19 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://example.com",
+  site: "http://quangvu.blog/",
   integrations: [
     astroI18next(),
     mdx(),
-    sitemap(),
+    sitemap({
+      i18n: {
+        locales: {
+          en: "en",
+          ja: "ja",
+          vi: "vi",
+        },
+      },
+    }),
     react(),
     tailwind({
       config: {

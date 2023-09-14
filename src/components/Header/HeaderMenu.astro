@@ -1,7 +1,11 @@
----import type { NavItem } from "~/types";
-
+---
+import i18next, { t } from "i18next";
+import type { NavItem } from "~/types";
+import HeaderLanguageSelect from "./HeaderLanguageSelect.astro";
 
 const { navLinks } = Astro.props;
+const lang = i18next.language;
+
 ---
 
 <div class="bg-black/50 h-14 w-14">
@@ -23,7 +27,9 @@ const { navLinks } = Astro.props;
               ))
             }
           </ul>
+          <HeaderLanguageSelect lang={lang} />
         </nav>
+
       </div>
 
       <div class="!left-0"></div>

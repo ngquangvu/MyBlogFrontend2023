@@ -1,9 +1,11 @@
 ---
-import { t } from "i18next";
+import i18next, { t } from "i18next";
 import HeaderLink from "./Header/HeaderLink.astro";
 import type { NavItem } from "~/types";
 import { Icon } from "astro-icon";
 import HeaderMenu from "./Header/HeaderMenu.astro";
+import { log } from "astro/dist/core/logger/core";
+import HeaderLanguageSelect from "./Header/HeaderLanguageSelect.astro";
 
 const NOTION_URL = await import.meta.env.NOTION_URL;
 const links: Array<NavItem> = [
@@ -24,6 +26,8 @@ const links: Array<NavItem> = [
     url: "#about",
   },
 ];
+
+const lang = i18next.language;
 ---
 
 <header class="">
@@ -31,9 +35,8 @@ const links: Array<NavItem> = [
   <div
     class="absolute z-10 bottom-0 w-full hidden md:flex justify-between py-5 px-5 md:px-9"
   >
-    <h2 class="flex items-center">
-      <Icon name="tsunami_white" class="h-8 w-8 text-white" />
-    </h2>
+    <HeaderLanguageSelect lang={lang} />
+
     <nav class="flex gap-6 md:gap-8">
       {
         links.map((link) => (

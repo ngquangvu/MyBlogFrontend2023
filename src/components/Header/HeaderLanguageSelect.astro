@@ -1,0 +1,33 @@
+---
+const { lang } = Astro.props;
+---
+
+<div class="flex items-center">
+  <svg
+    class="h-5 w-5 text-white mr-0.5"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    stroke-width="2"
+    stroke="currentColor"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path stroke="none" d="M0 0h24v24H0z"></path>
+    <circle cx="12" cy="12" r="9"></circle>
+    <line x1="3.6" y1="9" x2="20.4" y2="9"></line>
+    <line x1="3.6" y1="15" x2="20.4" y2="15"></line>
+    <path d="M11.5 3a17 17 0 0 0 0 18"></path>
+    <path d="M12.5 3a17 17 0 0 1 0 18"></path></svg
+  >
+  <select
+    aria-label="lang"
+    class="bg-black/100 text-white text-xl md:text-base hover:cursor-pointer hover:opacity-80 md:text-left pl-1 pr-2 select-lang text-center"
+    onchange="
+    location = this.value
+    "
+    ><option value="/" selected={lang === "en"}>English</option>
+    <option value="/ja" selected={lang === "ja"}>日本語</option></select
+  >
+</div>
