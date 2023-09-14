@@ -1,4 +1,5 @@
 ---
+import { t } from "i18next";
 import type { CustomerItem } from "~/types";
 import ContentSection from "./ContentSection.astro";
 import CustomerList from "./CustomerList.astro";
@@ -58,10 +59,7 @@ const customers: Array<CustomerItem> = [
 ];
 ---
 
-<ContentSection title="Customers" id="customer">
-  <Fragment slot="lead">
-    Many years of experience working with clients from prominent companies based
-    in Japan
-  </Fragment>
+<ContentSection title={t(`customers.title`)} id="customer">
+  <Fragment slot="lead" set:html={t(`customers.content`)} />
   <CustomerList items={customers} title="Customers" />
 </ContentSection>

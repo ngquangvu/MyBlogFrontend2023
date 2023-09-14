@@ -1,4 +1,5 @@
 import { defineConfig } from "astro/config";
+import astroI18next from "astro-i18next";
 import mdx from "@astrojs/mdx";
 import tailwind from "@astrojs/tailwind";
 import image from "@astrojs/image";
@@ -10,6 +11,7 @@ import react from "@astrojs/react";
 export default defineConfig({
   site: "https://example.com",
   integrations: [
+    astroI18next(),
     mdx(),
     sitemap(),
     react(),

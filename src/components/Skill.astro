@@ -1,4 +1,5 @@
 ---
+import { t } from "i18next";
 import { Icon } from "astro-icon";
 import ContentSection from "~/components/ContentSection.astro";
 import type { FeatureItem } from "~/types";
@@ -6,57 +7,45 @@ const { workedYear } = Astro.props;
 
 const skills: Array<FeatureItem> = [
   {
-    title: "Frontend Developer",
-    description:
-      "Specializing in HTML, CSS, and JavaScript, with expertise in frameworks for creating dynamic and responsive web applications",
+    title: t(`skill.1 title`),
+    description: t(`skill.1 content`),
     icon: "clarity:command-line",
   },
   {
-    title: "Backend Developer",
-    description:
-      "Building and maintaining the server-side logic of web applications, handling data processing and system integration",
+    title: t(`skill.2 title`),
+    description: t(`skill.2 content`),
     icon: "clarity:command-outline-badged",
   },
   {
-    title: "Unity Developer",
-    description:
-      "Specializing in creating and developing applications and games using the Unity game engine",
+    title: t(`skill.3 title`),
+    description: t(`skill.3 content`),
     icon: "unity",
   },
   {
-    title: "Leadership",
-    description:
-      "Take responsibility as a leader for " +
-      (workedYear - 2).toFixed(1) +
-      " years, guiding and directing a development team to deliver high-quality software solutions",
+    title: t(`skill.4 title`),
+    description: t(`skill.4 content`),
     icon: "leader",
   },
   {
-    title: "Language",
-    description:
-      "Proficient in English and Japanese (JLPT N3) for effective communication in both languages",
+    title: t(`skill.5 title`),
+    description: t(`skill.5 content`),
     icon: "cil:language",
   },
   {
-    title: "Enthusiasm",
-    description:
-      "Igniting and empowering a team to deliver exceptional software solutions with passion and drive",
+    title: t(`skill.6 title`),
+    description: t(`skill.6 content`),
     icon: "ri:empathize-line",
   },
   {
-    title: "Sociability",
-    description:
-      "Building strong relationships, promotes collaboration, and creates a positive work environment through effective communication",
+    title: t(`skill.7 title`),
+    description: t(`skill.7 content`),
     icon: "mdi:account-group",
   },
 ];
 ---
 
-<ContentSection title="Skills" id="skills">
-  <Fragment slot="lead">
-    After investing significant time in learning and working, I have acquired
-    and nurtured essential skills
-  </Fragment>
+<ContentSection title={t(`skill.title`)} id="skills">
+  <Fragment slot="lead" set:html={t(`skill.content`)} />
   <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
     {
       skills.map(({ title, description, icon }) => (

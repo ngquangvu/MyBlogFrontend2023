@@ -1,4 +1,5 @@
 ---
+import { t } from "i18next";
 import HeaderLink from "./Header/HeaderLink.astro";
 import type { NavItem } from "~/types";
 import { Icon } from "astro-icon";
@@ -7,19 +8,19 @@ import HeaderMenu from "./Header/HeaderMenu.astro";
 const NOTION_URL = await import.meta.env.NOTION_URL;
 const links: Array<NavItem> = [
   {
-    title: "Blog",
+    title: t(`header.blog`),
     url: "/",
   },
   {
-    title: "Notion",
+    title: t(`header.notion`),
     url: "https://ngquangvu.notion.site/e7eed0bfbb5c47b7a6b829a0907b1df5?v=baac0c7edb1f44d382d0354239a3a5b5&pvs=4",
   },
   {
-    title: "Contact",
+    title: t(`header.contact`),
     url: "#contact",
   },
   {
-    title: "About",
+    title: t(`header.about`),
     url: "#about",
   },
 ];

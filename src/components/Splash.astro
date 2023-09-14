@@ -1,4 +1,5 @@
 ---
+import { t } from "i18next";
 import Starfield from "~/components/Starfield.astro";
 import GitHubCorner from "~/components/GitCorner.astro";
 ---
@@ -10,9 +11,9 @@ import GitHubCorner from "~/components/GitCorner.astro";
   <div class="relative flex justify-center items-center h-full p-2 md:p-20">
     <h2 class="flex flex-col gap-2 sm:gap-4 sm:self-auto sm:justify-self-end">
       <div
-        class="text-4xl md:text-6xl 2xl:text-7xl gradient-text text-center font-extrabold tracking-tighter px-1"
+        class="text-4xl md:text-6xl 2xl:text-7xl gradient-text text-center font-extrabold tracking-normal py-2 px-1"
       >
-        The best view comes after the hardest climb
+        {t(`fv`)}
       </div>
     </h2>
   </div>
