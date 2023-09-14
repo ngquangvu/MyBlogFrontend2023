@@ -1,21 +1,12 @@
 ---
-import { Picture } from "@astrojs/image/components";
-import { Icon } from "astro-icon";
-import astronautImage from "~/assets/astronaut.png";
-import HeroImage from "~/components/AstronautImage.astro";
 import Starfield from "~/components/Starfield.astro";
 import GitHubCorner from "~/components/GitCorner.astro";
-
-const widths = [450, 800];
-const sizes = "(min-width: 640px) 42vw, 67vw";
 ---
 
 <section class="relative h-screen min-h-[500px] bg-black">
   <Starfield id="starfield" canvas_id="starfieldCanvas" />
   <GitHubCorner />
-  <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
-    <HeroImage />
-  </div>
+  <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40"></div>
   <div class="relative flex justify-center items-center h-full p-2 md:p-20">
     <h2 class="flex flex-col gap-2 sm:gap-4 sm:self-auto sm:justify-self-end">
       <div

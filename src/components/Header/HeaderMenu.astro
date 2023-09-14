@@ -1,0 +1,73 @@
+---import type { NavItem } from "~/types";
+
+
+const { navLinks } = Astro.props;
+---
+
+<div class="bg-black/50 h-16 w-16">
+  <button id="menuBtn" class="h-6 absolute z-50 left-5 top-5 hamburger block md:hidden focus:outline-none shadow-md" type="button" onclick="
+  navToggle();
+  ">
+                  <span class="hamburger__top-bun "></span><span class="hamburger__bottom-bun"></span>
+      </button>
+      <div id="menu" class="inset-0 fixed min-w-[100vw] h-screen z-40 top-0 left-[100%] transition-all duration-500 bg-black/90">
+        <nav class="flex flex-col space-y-4 p-16">
+          <ul class="flex w-full flex-col space-y-6 mb-8">
+            {
+              navLinks.map((item: NavItem) => (
+                <li>
+                  <button type="button" onclick=`navLinkClick("${item.url}");`>
+                                      <h2 class="text-xl text-white" set:html={item.title}></h2>
+                  </button>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+      </div>
+
+      <div class="!left-0"></div>
+</div>
+
+<style>
+  .hamburger {
+    cursor: pointer;
+    transition: all 0.25s;
+  }
+
+  .hamburger__top-bun,
+  .hamburger__bottom-bun {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: white;
+    transform: rotate(0);
+    transition: all 0.5s;
+  }
+
+  .hamburger:hover [class*="-bun"] {
+    opacity: 0.8;
+  }
+
+  .hamburger__top-bun {
+    transform: translateY(-5px);
+  }
+
+  .hamburger__bottom-bun {
+    transform: translateY(3px);
+  }
+
+  .open {
+    transform: rotate(90deg);
+    transform: translateY(-1px);
+  }
+
+  .open .hamburger__top-bun {
+    transform: rotate(45deg) translateY(0px);
+  }
+
+  .open .hamburger__bottom-bun {
+    transform: rotate(-45deg) translateY(0px);
+  }
+</style>

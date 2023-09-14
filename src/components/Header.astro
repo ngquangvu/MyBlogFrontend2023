@@ -1,10 +1,8 @@
 ---
-import { Image, Picture } from "@astrojs/image/components";
-
-import HeaderLink from "./HeaderLink.astro";
-import logoImage from "../assets/ghost.png";
+import HeaderLink from "./Header/HeaderLink.astro";
 import type { NavItem } from "~/types";
 import { Icon } from "astro-icon";
+import HeaderMenu from "./Header/HeaderMenu.astro";
 
 const NOTION_URL = await import.meta.env.NOTION_URL;
 const links: Array<NavItem> = [
@@ -22,29 +20,37 @@ const links: Array<NavItem> = [
   },
   {
     title: "About",
-    url: "/about",
+    url: "#about",
   },
 ];
 ---
 
-<header
-  class="absolute bottom-0 z-10 w-full flex justify-between py-5 px-5 md:px-9"
->
-  <h2 class="flex items-center">
-    <Icon name="tsunami_white" class="h-8 w-8 text-white" />
-  </h2>
-  <nav class="hidden sm:flex gap-6 md:gap-8">
-    {
-      links.map((link) => (
-        <HeaderLink
-          class={
-            "text-lg self-center text-white hover:animate-pulse hover:opacity-80"
-          }
-          href={link.url}
-        >
-          {link.title}
-        </HeaderLink>
-      ))
-    }
-  </nav>
+<header class="">
+  <!-- PC -->
+  <div
+    class="absolute z-10 bottom-0 w-full hidden md:flex justify-between py-5 px-5 md:px-9"
+  >
+    <h2 class="flex items-center">
+      <Icon name="tsunami_white" class="h-8 w-8 text-white" />
+    </h2>
+    <nav class="flex gap-6 md:gap-8">
+      {
+        links.map((link) => (
+          <HeaderLink
+            class={
+              "text-lg self-center text-white hover:animate-pulse hover:opacity-80"
+            }
+            href={link.url}
+          >
+            {link.title}
+          </HeaderLink>
+        ))
+      }
+    </nav>
+  </div>
+
+  <!-- SP -->
+  <div class="fixed z-30 top-0 block md:hidden">
+    <HeaderMenu navLinks={links} />
+  </div>
 </header>
