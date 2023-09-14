@@ -3,32 +3,32 @@ import { Icon } from "astro-icon";
 import type { CustomerItem } from "~/types";
 
 export interface Props {
-    items: Array<CustomerItem>;
-    title: string;
+  items: Array<CustomerItem>;
+  title: string;
 }
 
 const { items, title } = Astro.props;
 ---
 
 <div class="w-full max-w-6xl space-y-2">
-    <div
-        class="relative rounded-lg border border-default bg-gray-50 px-6 pb-6 pt-8"
-    >
-        <ul class="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-5">
-            {
-                items.map((item) => (
-                    <li class="px-2 md:px-5 flex justify-center">
-                        <a
-                            class="flex justify-center h-20 w-full hover:opacity-80 hover:scale-105 transition-all duration-150"
-                            target="_blank"
-                            href={item.url}
-                        >
-                            <Icon class="" name={item.icon} />
-                            <span class="hidden">{item.title}</span>
-                        </a>
-                    </li>
-                ))
-            }
-        </ul>
-    </div>
+  <div
+    class="relative rounded-lg border border-default bg-gray-50 px-6 pb-6 pt-8"
+  >
+    <ul class="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-5">
+      {
+        items.map((item) => (
+          <li class="px-2 md:px-5 flex justify-center">
+            <a
+              class="flex justify-center h-20 w-full grayscale-[1] hover:grayscale-0 hover:scale-105 transition-all duration-150"
+              target="_blank"
+              href={item.url}
+            >
+              <Icon class="max-w-[180px]" name={item.icon} />
+              <span class="hidden">{item.title}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </div>
