@@ -8,43 +8,43 @@ import { Icon } from "astro-icon";
 
 const NOTION_URL = await import.meta.env.NOTION_URL;
 const links: Array<NavItem> = [
-	{
-		title: "Blog",
-		url: "/",
-	},
-	{
-		title: "Notion",
-		url: "https://ngquangvu.notion.site/e7eed0bfbb5c47b7a6b829a0907b1df5?v=baac0c7edb1f44d382d0354239a3a5b5&pvs=4",
-	},
-	{
-		title: "Contact",
-		url: "#contact",
-	},
-	{
-		title: "About",
-		url: "/about",
-	},
+  {
+    title: "Blog",
+    url: "/",
+  },
+  {
+    title: "Notion",
+    url: "https://ngquangvu.notion.site/e7eed0bfbb5c47b7a6b829a0907b1df5?v=baac0c7edb1f44d382d0354239a3a5b5&pvs=4",
+  },
+  {
+    title: "Contact",
+    url: "#contact",
+  },
+  {
+    title: "About",
+    url: "/about",
+  },
 ];
 ---
 
 <header
-	class="absolute bottom-0 z-10 w-full flex justify-between py-5 px-5 md:px-9"
+  class="absolute bottom-0 z-10 w-full flex justify-between py-5 px-5 md:px-9"
 >
-	<h2 class="flex items-center">
-		<Icon name="tsunami_white" class="h-8 w-8 text-white" />
-	</h2>
-	<nav class="flex gap-6 md:gap-8">
-		{
-			links.map((link) => (
-				<HeaderLink
-					class={
-						"text-lg self-center text-white hover:animate-wiggle hover:opacity-80"
-					}
-					href={link.url}
-				>
-					{link.title}
-				</HeaderLink>
-			))
-		}
-	</nav>
+  <h2 class="flex items-center">
+    <Icon name="tsunami_white" class="h-8 w-8 text-white" />
+  </h2>
+  <nav class="hidden sm:flex gap-6 md:gap-8">
+    {
+      links.map((link) => (
+        <HeaderLink
+          class={
+            "text-lg self-center text-white hover:animate-pulse hover:opacity-80"
+          }
+          href={link.url}
+        >
+          {link.title}
+        </HeaderLink>
+      ))
+    }
+  </nav>
 </header>

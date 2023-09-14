@@ -4,166 +4,167 @@ import ContentSection from "./ContentSection.astro";
 import UsableList from "./UsableList.astro";
 
 const languages: Array<UsableItem> = [
-    {
-        title: "Javascript",
-        icon: "teenyicons:javascript-solid",
-        url: "",
-    },
-    {
-        title: "Typescript",
-        icon: "teenyicons:typescript-solid",
-        url: "",
-    },
-    {
-        title: "PHP",
-        icon: "simple-icons:php",
-        url: "",
-    },
-    {
-        title: "C Sharp",
-        icon: "simple-icons:csharp",
-        url: "",
-    },
-    {
-        title: "SQL, MySQL, Oracle",
-        icon: "mdi:sql-query",
-        url: "",
-    },
-    {
-        title: "MongoDB",
-        icon: "simple-icons:mongodb",
-        url: "",
-    },
+  {
+    title: "Javascript",
+    icon: "teenyicons:javascript-solid",
+    url: "",
+  },
+  {
+    title: "Typescript",
+    icon: "teenyicons:typescript-solid",
+    url: "",
+  },
+  {
+    title: "PHP",
+    icon: "simple-icons:php",
+    url: "",
+  },
+  {
+    title: "C Sharp",
+    icon: "simple-icons:csharp",
+    url: "",
+  },
+  {
+    title: "SQL, MySQL, Oracle",
+    icon: "mdi:sql-query",
+    url: "",
+  },
+  {
+    title: "MongoDB",
+    icon: "simple-icons:mongodb",
+    url: "",
+  },
 ];
 
 const frameworks: Array<UsableItem> = [
-    {
-        title: "React",
-        icon: "teenyicons:react-outline",
-        url: "",
-    },
-    {
-        title: "Laravel",
-        icon: "teenyicons:laravel-solid",
-        url: "",
-    },
-    {
-        title: "Unity",
-        icon: "simple-icons:unity",
-        url: "",
-    },
-    {
-        title: "Vue",
-        icon: "teenyicons:vue-solid",
-        url: "",
-    },
-    {
-        title: "NestJS",
-        icon: "simple-icons:nestjs",
-        url: "",
-    },
-    {
-        title: "Wordpress",
-        icon: "bi:wordpress",
-        url: "",
-    },
+  {
+    title: "React",
+    icon: "teenyicons:react-outline",
+    url: "",
+  },
+  {
+    title: "Laravel",
+    icon: "teenyicons:laravel-solid",
+    url: "",
+  },
+
+  {
+    title: "NestJS",
+    icon: "simple-icons:nestjs",
+    url: "",
+  },
+  {
+    title: "Wordpress",
+    icon: "bi:wordpress",
+    url: "",
+  },
+  {
+    title: "Unity",
+    icon: "simple-icons:unity",
+    url: "",
+  },
+  {
+    title: "Vue",
+    icon: "teenyicons:vue-solid",
+    url: "",
+  },
 ];
 
 const platforms: Array<UsableItem> = [
-    {
-        title: "HTML",
-        icon: "akar-icons:html-fill",
-        url: "",
-    },
-    {
-        title: "CSS, SCSS",
-        icon: "akar-icons:css-fill",
-        url: "",
-    },
-    {
-        title: "Astro",
-        icon: "simple-icons:astro",
-        url: "",
-    },
-    {
-        title: "Gatsby",
-        icon: "simple-icons:gatsby",
-        url: "",
-    },
-    {
-        title: "Tailwind",
-        icon: "teenyicons:tailwind-solid",
-        url: "",
-    },
-    {
-        title: "MUI",
-        icon: "simple-icons:mui",
-        url: "",
-    },
-    {
-        title: "Docker",
-        icon: "simple-icons:docker",
-        url: "",
-    },
-    {
-        title: "GitHub",
-        icon: "fa-brands:github",
-        url: "",
-    },
-    {
-        title: "SVN",
-        icon: "file-icons:svn",
-        url: "",
-    },
-    {
-        title: "Salesforce",
-        icon: "fa-brands:salesforce",
-        url: "",
-    },
-    {
-        title: "Electron",
-        icon: "simple-icons:electron",
-        url: "",
-    },
-    {
-        title: "Android",
-        icon: "ant-design:android-filled",
-        url: "",
-    },
-    {
-        title: "Adobe Photoshop",
-        icon: "simple-icons:adobephotoshop",
-        url: "",
-    },
-    {
-        title: "Adobe AI",
-        icon: "simple-icons:adobeillustrator",
-        url: "",
-    },
-    {
-        title: "Adobe XD",
-        icon: "simple-icons:adobexd",
-        url: "",
-    },
-    {
-        title: "Figma",
-        icon: "simple-icons:figma",
-        url: "",
-    },
-    {
-        title: "",
-        icon: "ph:dots-three-bold",
-        url: "",
-    },
+  {
+    title: "HTML",
+    icon: "akar-icons:html-fill",
+    url: "",
+  },
+  {
+    title: "CSS, SCSS",
+    icon: "akar-icons:css-fill",
+    url: "",
+  },
+  {
+    title: "Astro",
+    icon: "simple-icons:astro",
+    url: "",
+  },
+  {
+    title: "Gatsby",
+    icon: "simple-icons:gatsby",
+    url: "",
+  },
+  {
+    title: "Tailwind",
+    icon: "teenyicons:tailwind-solid",
+    url: "",
+  },
+  {
+    title: "MUI",
+    icon: "simple-icons:mui",
+    url: "",
+  },
+  {
+    title: "Docker",
+    icon: "simple-icons:docker",
+    url: "",
+  },
+  {
+    title: "GitHub",
+    icon: "fa-brands:github",
+    url: "",
+  },
+  {
+    title: "SVN",
+    icon: "file-icons:svn",
+    url: "",
+  },
+  {
+    title: "Salesforce",
+    icon: "fa-brands:salesforce",
+    url: "",
+  },
+  {
+    title: "Electron",
+    icon: "simple-icons:electron",
+    url: "",
+  },
+  {
+    title: "Android",
+    icon: "ant-design:android-filled",
+    url: "",
+  },
+  {
+    title: "Adobe Photoshop",
+    icon: "simple-icons:adobephotoshop",
+    url: "",
+  },
+  {
+    title: "Adobe AI",
+    icon: "simple-icons:adobeillustrator",
+    url: "",
+  },
+  {
+    title: "Adobe XD",
+    icon: "simple-icons:adobexd",
+    url: "",
+  },
+  {
+    title: "Figma",
+    icon: "simple-icons:figma",
+    url: "",
+  },
+  {
+    title: "",
+    icon: "ph:dots-three-bold",
+    url: "",
+  },
 ];
 ---
 
 <ContentSection title="What I do" id="usable">
-    <Fragment slot="lead">
-        The programming languages, frameworks, and other tools that I can
-        proficiently utilize
-    </Fragment>
-    <UsableList items={languages} title="Languages & Databases" />
-    <UsableList items={frameworks} title="Library & Frameworks" />
-    <UsableList items={platforms} title="Others" />
+  <Fragment slot="lead">
+    The programming languages, frameworks, and other tools that I can
+    proficiently utilize
+  </Fragment>
+  <UsableList items={languages} title="Languages & Databases" />
+  <UsableList items={frameworks} title="Library & Frameworks" />
+  <UsableList items={platforms} title="Others" />
 </ContentSection>
