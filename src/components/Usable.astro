@@ -1,4 +1,5 @@
 ---
+import { t } from "i18next";
 import type { UsableItem } from "~/types";
 import ContentSection from "./ContentSection.astro";
 import UsableList from "./UsableList.astro";
@@ -159,12 +160,9 @@ const platforms: Array<UsableItem> = [
 ];
 ---
 
-<ContentSection title="What I do" id="usable">
-  <Fragment slot="lead">
-    The programming languages, frameworks, and other tools that I can
-    proficiently utilize
-  </Fragment>
-  <UsableList items={languages} title="Languages & Databases" />
-  <UsableList items={frameworks} title="Library & Frameworks" />
-  <UsableList items={platforms} title="Others" />
+<ContentSection title={t(`what i do.title`)} id="usable">
+  <Fragment slot="lead" set:html={t(`what i do.content`)} />
+  <UsableList items={languages} title={t(`what i do.head 1`)} />
+  <UsableList items={frameworks} title={t(`what i do.head 2`)} />
+  <UsableList items={platforms} title={t(`what i do.head 3`)} />
 </ContentSection>

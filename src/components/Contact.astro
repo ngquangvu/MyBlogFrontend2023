@@ -1,7 +1,8 @@
 ---
+import { t } from "i18next";
 import { Icon } from "astro-icon";
 import type { FooterLink } from "~/types";
-import ContactForm from "./ContactForm";
+
 
 // const CONTACT_API = fetch(`${import.meta.env.CONTACT_API}/contact`);
 const CONTACT_API = (await import.meta.env.CONTACT_API) + "contact";
@@ -58,27 +59,25 @@ const links: Array<FooterLink> = [
             </div>
           </div>
         </div>
-        <h2 class="text-3xl font-bold tracking-tight text-white">
-          Get in touch
-        </h2>
-        <p class="mt-6 text-base leading-8 text-gray-300">
-          Feel free to reach out to me using the contact information below or by
-          filling out the form
-        </p>
+        <h2 class="text-3xl font-bold tracking-tight text-white" set:html={t(`contact.title`)} />
+        <p
+          class="mt-6 text-base leading-8 text-gray-300"
+          set:html={t(`contact.content`)}
+        />
         <dl class="mt-10 space-y-4 text-base leading-7 text-gray-300">
           <div class="flex gap-x-2 items-center">
             <dt class="flex-none">
               <span class="sr-only">Name</span>
               <Icon name="ph:user-bold" class="h-6 w-6" />
             </dt>
-            <dd>Nguyen Quang Vu</dd>
+            <dd>{t(`contact.name`)}</dd>
           </div>
           <div class="flex gap-x-2 items-center">
             <dt class="flex-none">
               <span class="sr-only">Address</span>
               <Icon name="octicon:location-16" class="h-6 w-6" />
             </dt>
-            <dd>District 1, Ho Chi Minh city, Vietnam</dd>
+            <dd>{t(`contact.address`)}</dd>
           </div>
           <div class="flex gap-x-2 items-center">
             <dt class="flex-none">
@@ -86,7 +85,7 @@ const links: Array<FooterLink> = [
               <Icon name="ic:outline-phone" class="h-6 w-6" />
             </dt>
             <dd>
-              <a class="hover:text-white break-all" href="tel:+84903306600">
+              <a class="hover:text-white break-all" href="tel:84903306600">
                 +84 90 330 6600
               </a>
             </dd>
@@ -136,7 +135,7 @@ const links: Array<FooterLink> = [
               for="first-name"
               class="block text-sm font-semibold leading-6 text-white"
             >
-              First name
+              {t(`contact.form first name`)}
             </label>
             <div class="mt-2.5">
               <input
@@ -153,7 +152,7 @@ const links: Array<FooterLink> = [
               for="last-name"
               class="block text-sm font-semibold leading-6 text-white"
             >
-              Last name
+              {t(`contact.form last name`)}
             </label>
             <div class="mt-2.5">
               <input
@@ -170,7 +169,7 @@ const links: Array<FooterLink> = [
               for="email"
               class="block text-sm font-semibold leading-6 text-white"
             >
-              Email
+              {t(`contact.form email`)}
             </label>
             <div class="mt-2.5">
               <input
@@ -187,7 +186,7 @@ const links: Array<FooterLink> = [
               for="phone-number"
               class="block text-sm font-semibold leading-6 text-white"
             >
-              Phone number
+              {t(`contact.form phone`)}
             </label>
             <div class="mt-2.5">
               <input
@@ -204,7 +203,7 @@ const links: Array<FooterLink> = [
               for="message"
               class="block text-sm font-semibold leading-6 text-white"
             >
-              Message
+              {t(`contact.form message`)}
             </label>
             <div class="mt-2.5">
               <textarea
@@ -221,7 +220,7 @@ const links: Array<FooterLink> = [
             type="submit"
             class="pointer-events-none border-2 opacity-60 border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white duration-500 px-3.5 py-2.5 text-center text-sm font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
           >
-            Send message
+            {t(`contact.form send`)}
           </button>
         </div>
       </div>
@@ -231,19 +230,19 @@ const links: Array<FooterLink> = [
 
 <script is:inline type="text/javascript">
 function UnCryptMailto(s) {
-    var n = 0;
-    var r = "";
-    for (var i = 0; i < s.length; i++) {
-        n = s.charCodeAt(i);
-        if (n >= 8364) {
-            n = 128;
-        }
-        r += String.fromCharCode(n - 1);
+  var n = 0;
+  var r = "";
+  for (var i = 0; i < s.length; i++) {
+    n = s.charCodeAt(i);
+    if (n >= 8364) {
+      n = 128;
     }
-    return r;
+    r += String.fromCharCode(n - 1);
+  }
+  return r;
 }
 
 function linkTo_UnCryptMailto(s) {
-    location.href = UnCryptMailto(s);
+  location.href = UnCryptMailto(s);
 }
 </script>
