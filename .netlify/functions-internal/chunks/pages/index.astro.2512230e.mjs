@@ -1,4 +1,4 @@
-import { c as createAstro, a as createComponent, r as renderTemplate, b as addAttribute, m as maybeRenderHead, s as spreadAttributes, d as renderSlot, u as unescapeHTML, e as renderComponent, F as Fragment, f as renderHead } from '../astro.93473902.mjs';
+import { c as createAstro, a as createComponent, r as renderTemplate, b as addAttribute, m as maybeRenderHead, s as spreadAttributes, d as renderSlot, u as unescapeHTML, e as renderComponent, F as Fragment, f as renderHead } from '../astro.eca5d910.mjs';
 import i18next, { t, changeLanguage } from 'i18next';
 import fsBackend from 'i18next-fs-backend';
 import module2 from 'module';
@@ -27,7 +27,7 @@ const $$BaseHead = createComponent(async ($$result, $$props, $$slots) => {
   const canonicalURL = new URL(Astro2.url.pathname, Astro2.site);
   const { title, description, image = "/placeholder-social.jpg" } = Astro2.props;
   return renderTemplate(_a$3 || (_a$3 = __template$3(['<!-- Global Metadata --><meta charset="utf-8">\n<meta name="viewport" content="width=device-width,initial-scale=1">\n<link rel="icon" type="image/svg+xml" href="/tsunami.svg">\n<meta name="generator"', '>\n\n<!-- Canonical URL -->\n<link rel="canonical"', ">\n\n<!-- Primary Meta Tags -->\n<title>", '</title>\n<meta name="title"', '>\n<meta name="description"', '>\n\n<!-- Open Graph / Facebook -->\n<meta property="og:type" content="website">\n<meta property="og:url"', '>\n<meta property="og:title"', '>\n<meta property="og:description"', '>\n<meta property="og:image"', '>\n\n<!-- Twitter -->\n<meta property="twitter:card" content="summary_large_image">\n<meta property="twitter:url"', '>\n<meta property="twitter:title"', '>\n<meta property="twitter:description"', '>\n<meta property="twitter:image"', '>\n\n<!-- initialize theme -->\n<script>\nconst themeSaved = localStorage.getItem("theme");\n\nif (themeSaved) {\n	document.documentElement.dataset.theme = themeSaved;\n} else {\n	const prefersDark = window.matchMedia(\n		"(prefers-color-scheme: dark)"\n	).matches;\n	document.documentElement.dataset.theme = prefersDark ? "dark" : "light";\n}\n\nwindow\n	.matchMedia("(prefers-color-scheme: dark)")\n	.addEventListener("change", (event) => {\n		if (!localStorage.getItem("theme")) {\n			document.documentElement.dataset.theme = event.matches\n				? "dark"\n				: "light";\n		}\n	});\n<\/script>'])), addAttribute(Astro2.generator, "content"), addAttribute(canonicalURL, "href"), title, addAttribute(title, "content"), addAttribute(description, "content"), addAttribute(Astro2.url, "content"), addAttribute(title, "content"), addAttribute(description, "content"), addAttribute(new URL(image, Astro2.url), "content"), addAttribute(Astro2.url, "content"), addAttribute(title, "content"), addAttribute(description, "content"), addAttribute(new URL(image, Astro2.url), "content"));
-}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/BaseHead.astro");
+}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/BaseHead.astro", void 0);
 
 const $$Astro$l = createAstro("https://example.com");
 const $$HeaderLink = createComponent(async ($$result, $$props, $$slots) => {
@@ -36,17 +36,17 @@ const $$HeaderLink = createComponent(async ($$result, $$props, $$slots) => {
   const { href, class: className, ...props } = Astro2.props;
   const { pathname } = Astro2.url;
   const isActive = href === pathname || href === pathname.replace(/\/$/, "");
-  return renderTemplate`${maybeRenderHead($$result)}<a${addAttribute(href, "href")}${addAttribute([className, { active: isActive }], "class:list")}${spreadAttributes(props)}>
+  return renderTemplate`${maybeRenderHead()}<a${addAttribute(href, "href")}${addAttribute([className, { active: isActive }], "class:list")}${spreadAttributes(props)}>
 	${renderSlot($$result, $$slots["default"])}
 </a>`;
-}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/Header/HeaderLink.astro");
+}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/Header/HeaderLink.astro", void 0);
 
 const $$Astro$k = createAstro("https://example.com");
 const $$HeaderMenu = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$k, $$props, $$slots);
   Astro2.self = $$HeaderMenu;
   const { navLinks } = Astro2.props;
-  return renderTemplate`${maybeRenderHead($$result)}<div class="bg-black/50 h-14 w-14 astro-A47QGZF6">
+  return renderTemplate`${maybeRenderHead()}<div class="bg-black/50 h-14 w-14 astro-A47QGZF6">
   <button id="menuBtn" class="h-full w-full absolute z-50 -left-3 top-0 hamburger block md:hidden astro-A47QGZF6" type="button" onclick="
   navToggle();
   ">
@@ -66,14 +66,14 @@ const $$HeaderMenu = createComponent(async ($$result, $$props, $$slots) => {
 
       <div class="!left-0 astro-A47QGZF6"></div>
 </div>`;
-}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/Header/HeaderMenu.astro");
+}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/Header/HeaderMenu.astro", void 0);
 
 const $$Astro$j = createAstro("https://example.com");
 const $$HeaderLanguageSelect = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$j, $$props, $$slots);
   Astro2.self = $$HeaderLanguageSelect;
   const { lang } = Astro2.props;
-  return renderTemplate`${maybeRenderHead($$result)}<div class="flex items-center">
+  return renderTemplate`${maybeRenderHead()}<div class="flex items-center">
   <svg class="h-5 w-5 text-white mr-0.5" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path stroke="none" d="M0 0h24v24H0z"></path>
     <circle cx="12" cy="12" r="9"></circle>
@@ -86,7 +86,7 @@ const $$HeaderLanguageSelect = createComponent(async ($$result, $$props, $$slots
     "><option value="/"${addAttribute(lang === "en", "selected")}>English</option>
     <option value="/ja"${addAttribute(lang === "ja", "selected")}>日本語</option></select>
 </div>`;
-}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/Header/HeaderLanguageSelect.astro");
+}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/Header/HeaderLanguageSelect.astro", void 0);
 
 const $$Astro$i = createAstro("https://example.com");
 const $$Header = createComponent(async ($$result, $$props, $$slots) => {
@@ -112,7 +112,7 @@ const $$Header = createComponent(async ($$result, $$props, $$slots) => {
     }
   ];
   const lang = i18next.language;
-  return renderTemplate`${maybeRenderHead($$result)}<header class="">
+  return renderTemplate`${maybeRenderHead()}<header class="">
   <!-- PC -->
   <div class="absolute z-10 bottom-0 w-full hidden md:flex justify-between py-5 px-5 md:px-9">
     ${renderComponent($$result, "HeaderLanguageSelect", $$HeaderLanguageSelect, { "lang": lang })}
@@ -127,7 +127,7 @@ const $$Header = createComponent(async ($$result, $$props, $$slots) => {
     ${renderComponent($$result, "HeaderMenu", $$HeaderMenu, { "navLinks": links })}
   </div>
 </header>`;
-}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/Header.astro");
+}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/Header.astro", void 0);
 
 const __vite_glob_1_0 = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n     xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n     xmlns:cc=\"http://creativecommons.org/ns#\"\n     xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n     xmlns:svg=\"http://www.w3.org/2000/svg\"\n     xmlns=\"http://www.w3.org/2000/svg\"\n     version=\"1.1\"\n     id=\"svg11067\"\n     viewBox=\"0 0 300 50.122811\"\n     height=\"50.12281\"\n     width=\"300\">\n    <defs\n         id=\"defs11069\">\n        <clipPath\n             id=\"clipPath10811\"\n             clipPathUnits=\"userSpaceOnUse\">\n            <path\n                 id=\"path10813\"\n                 d=\"m 0,0 609.449,0 0,793.701 L 0,793.701 0,0 Z\" />\n        </clipPath>\n        <clipPath\n             id=\"clipPath10789\"\n             clipPathUnits=\"userSpaceOnUse\">\n            <path\n                 id=\"path10791\"\n                 d=\"m 0,0 609.449,0 0,793.701 L 0,793.701 0,0 Z\" />\n        </clipPath>\n    </defs>\n    <metadata\n         id=\"metadata11072\">\n        <rdf:RDF>\n            <cc:Work\n                 rdf:about=\"\">\n                <dc:format>image/svg+xml</dc:format>\n                <dc:type\n                     rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\" />\n                <dc:title></dc:title>\n            </cc:Work>\n        </rdf:RDF>\n    </metadata>\n    <g\n         transform=\"translate(-296.12686,-471.83073)\"\n         id=\"layer1\">\n        <g\n             id=\"g10785\"\n             transform=\"matrix(2.1024427,0,0,-2.1024427,-604.43232,2067.0451)\">\n            <g\n                 clip-path=\"url(#clipPath10789)\"\n                 id=\"g10787\">\n                <g\n                     transform=\"translate(542.745,757.7267)\"\n                     id=\"g10793\">\n                    <path\n                         id=\"path10795\"\n                         style=\"fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\"\n                         d=\"m 0,0 0,-8.723 11.67,0 c 0,-0.03 -0.01,8.725 0,8.723 -0.01,0.002 5.72,0 5.78,0 0,0 0.02,-21.785 0,-21.81 l -5.78,0 0,9.6 c 0,-0.03 -11.67,0 -11.67,0 0.01,-0.04 0,-9.607 0,-9.6 l -5.77,0 c 0,0 0.03,21.81 0,21.81 L 0,0 Z\" />\n                </g>\n                <g\n                     transform=\"translate(487.915,757.7267)\"\n                     id=\"g10797\">\n                    <path\n                         id=\"path10799\"\n                         style=\"fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\"\n                         d=\"m 0,0 0,-3.708 -8.84,0 0,-18.102 -5.77,0 0,18.102 -8.84,0 c 0,0 0.01,3.7 0,3.708 C -23.44,-0.008 0,0 0,0\" />\n                </g>\n                <g\n                     transform=\"translate(496.635,754.0187)\"\n                     id=\"g10801\">\n                    <path\n                         id=\"path10803\"\n                         style=\"fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\"\n                         d=\"m 0,0 -4.02,-9.923 8.04,0 L 0,0 Z m 13.73,-18.102 -6.43,0 c 0.01,0 -1.89,4.687 -1.89,4.687 l -10.83,0 c 0,0 -1.86,-4.694 -1.88,-4.687 0,-0.007 -6.44,0 -6.44,0 l 10.2,21.81 c 0,-0.01 7.08,0 7.08,0 l 10.19,-21.81 z\" />\n                </g>\n            </g>\n        </g>\n        <path\n             id=\"path10805\"\n             style=\"fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\"\n             d=\"m 582.97475,519.8218 12.1521,0 0,-45.85427 -12.1521,0 0,45.85427 z\" />\n        <g\n             id=\"g10807\"\n             transform=\"matrix(2.1024427,0,0,-2.1024427,-604.43232,2067.0451)\">\n            <g\n                 clip-path=\"url(#clipPath10811)\"\n                 id=\"g10809\">\n                <g\n                     transform=\"translate(434.5951,757.7267)\"\n                     id=\"g10815\">\n                    <path\n                         id=\"path10817\"\n                         style=\"fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\"\n                         d=\"m 0,0 c 0,0 -0.01,-8.787 0,-8.723 l 11.67,0 c 0,-0.03 -0.02,8.725 0,8.723 -0.02,0.002 5.72,0 5.78,0 0,0 0.02,-21.785 0,-21.81 l -5.78,0 0,9.6 c 0,-0.03 -11.67,0 -11.67,0 0,-0.04 -0.01,-9.607 0,-9.6 l -5.78,0 c 0,0 0.03,21.81 0,21.81 L 0,0 Z\" />\n                </g>\n            </g>\n        </g>\n        <path\n             id=\"path10819\"\n             style=\"fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\"\n             d=\"m 355.59556,519.8218 12.13109,0 0,-45.85427 -12.13109,0 0,45.85427 z\" />\n        <g\n             transform=\"matrix(2.1024427,0,0,-2.1024427,468.16034,507.13208)\"\n             id=\"g10829\">\n            <path\n                 id=\"path10831\"\n                 style=\"fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\"\n                 d=\"m 0,0 c -0.51,1.471 -0.78,3.021 -0.78,4.653 0,2.291 0.4,4.51 1.5,6.358 1.13,1.897 2.87,3.361 4.97,4.139 1.99,0.752 4.14,1.165 6.4,1.165 2.59,0 5.04,-0.567 7.29,-1.535 2.08,-0.897 3.65,-2.772 4.12,-5.039 0.1,-0.448 0.17,-0.917 0.2,-1.385 l -6.06,0 c -0.02,0.588 -0.11,1.16 -0.31,1.677 -0.46,1.206 -1.47,2.149 -2.71,2.521 -0.8,0.251 -1.66,0.381 -2.53,0.381 -1,0 -1.97,-0.169 -2.86,-0.491 C 7.75,11.924 6.6,10.723 6.07,9.242 5.56,7.812 5.28,6.263 5.28,4.653 c 0,-1.336 0.22,-2.621 0.55,-3.83 0.44,-1.587 1.64,-2.866 3.16,-3.449 0.96,-0.36 2.01,-0.571 3.1,-0.571 0.93,0 1.82,0.14 2.67,0.412 1.13,0.364 2.05,1.197 2.53,2.268 0.31,0.711 0.47,1.499 0.47,2.341 l 6.09,0 C 23.81,1.111 23.71,0.409 23.56,-0.247 23.03,-2.406 21.52,-4.22 19.52,-5.059 c -2.29,-0.957 -4.79,-1.515 -7.43,-1.515 -2.04,0 -4.02,0.32 -5.86,0.9 C 3.41,-4.788 0.97,-2.758 0,0\" />\n        </g>\n    </g>\n</svg>\n";
 
@@ -407,8 +407,8 @@ const $$Icon = createComponent(async ($$result, $$props, $$slots) => {
 ${e}`);
     }
   }
-  return renderTemplate`${maybeRenderHead($$result)}<svg${spreadAttributes(props)}${addAttribute(name, "astro-icon")}>${unescapeHTML((title ? `<title>${title}</title>` : "") + innerHTML)}</svg>`;
-}, "/Users/valky/Project/MyBlog/MyBlogFrontend/node_modules/astro-icon/lib/Icon.astro");
+  return renderTemplate`${maybeRenderHead()}<svg${spreadAttributes(props)}${addAttribute(name, "astro-icon")}>${unescapeHTML((title ? `<title>${title}</title>` : "") + innerHTML)}</svg>`;
+}, "/Users/valky/Project/MyBlog/MyBlogFrontend/node_modules/astro-icon/lib/Icon.astro", void 0);
 
 const sprites = /* @__PURE__ */ new WeakMap();
 function trackSprite(request, name) {
@@ -448,10 +448,10 @@ ${e}`);
       }
     });
   }));
-  return renderTemplate`${maybeRenderHead($$result)}<svg${addAttribute(`position: absolute; width: 0; height: 0; overflow: hidden; ${style ?? ""}`.trim(), "style")}${spreadAttributes({ "aria-hidden": true, ...props })} astro-icon-spritesheet>
+  return renderTemplate`${maybeRenderHead()}<svg${addAttribute(`position: absolute; width: 0; height: 0; overflow: hidden; ${style ?? ""}`.trim(), "style")}${spreadAttributes({ "aria-hidden": true, ...props })} astro-icon-spritesheet>
     ${icons.map((icon) => renderTemplate`<symbol${spreadAttributes(icon.props)}${addAttribute(`${SPRITESHEET_NAMESPACE}:${icon.name}`, "id")}>${unescapeHTML(icon.innerHTML)}</symbol>`)}
 </svg>`;
-}, "/Users/valky/Project/MyBlog/MyBlogFrontend/node_modules/astro-icon/lib/Spritesheet.astro");
+}, "/Users/valky/Project/MyBlog/MyBlogFrontend/node_modules/astro-icon/lib/Spritesheet.astro", void 0);
 
 const $$Astro$f = createAstro("https://example.com");
 const $$SpriteProvider = createComponent(async ($$result, $$props, $$slots) => {
@@ -460,7 +460,7 @@ const $$SpriteProvider = createComponent(async ($$result, $$props, $$slots) => {
   const content = await Astro2.slots.render("default");
   return renderTemplate`${renderComponent($$result, "Fragment", Fragment, {}, { "default": ($$result2) => renderTemplate`${unescapeHTML(content)}` })}
 ${renderComponent($$result, "Spritesheet", $$Spritesheet, {})}`;
-}, "/Users/valky/Project/MyBlog/MyBlogFrontend/node_modules/astro-icon/lib/SpriteProvider.astro");
+}, "/Users/valky/Project/MyBlog/MyBlogFrontend/node_modules/astro-icon/lib/SpriteProvider.astro", void 0);
 
 const $$Astro$e = createAstro("https://example.com");
 const $$Sprite = createComponent(async ($$result, $$props, $$slots) => {
@@ -473,11 +473,11 @@ const $$Sprite = createComponent(async ($$result, $$props, $$slots) => {
   }
   const href = `#${SPRITESHEET_NAMESPACE}:${name}`;
   trackSprite(Astro2.request, name);
-  return renderTemplate`${maybeRenderHead($$result)}<svg${spreadAttributes(props)}${addAttribute(className, "class")}${addAttribute(name, "astro-icon")}>
+  return renderTemplate`${maybeRenderHead()}<svg${spreadAttributes(props)}${addAttribute(className, "class")}${addAttribute(name, "astro-icon")}>
     ${title ? renderTemplate`<title>${title}</title>` : ""}
     <use${spreadAttributes({ "xlink:href": href, width: props.width, height: props.height, x, y })}></use>
 </svg>`;
-}, "/Users/valky/Project/MyBlog/MyBlogFrontend/node_modules/astro-icon/lib/Sprite.astro");
+}, "/Users/valky/Project/MyBlog/MyBlogFrontend/node_modules/astro-icon/lib/Sprite.astro", void 0);
 
 Object.assign($$Sprite, { Provider: $$SpriteProvider });
 
@@ -520,7 +520,7 @@ const $$Contact = createComponent(async ($$result, $$props, $$slots) => {
       </div>
       <div>
         <ul class="w-full flex flex-wrap justify-start gap-4 mt-6 md:mt-2">
-          `, '\n        </ul>\n      </div>\n    </div>\n    <form action="#" method="POST" class="px-6 pb-10 pt-16 lg:px-8">\n      <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">\n        <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">\n          <div>\n            <label for="first-name" class="block text-sm font-semibold leading-6 text-white">\n              ', '\n            </label>\n            <div class="mt-2.5">\n              <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 sm:text-sm sm:leading-6">\n            </div>\n          </div>\n          <div>\n            <label for="last-name" class="block text-sm font-semibold leading-6 text-white">\n              ', '\n            </label>\n            <div class="mt-2.5">\n              <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 sm:text-sm sm:leading-6">\n            </div>\n          </div>\n          <div class="sm:col-span-2">\n            <label for="email" class="block text-sm font-semibold leading-6 text-white">\n              ', '\n            </label>\n            <div class="mt-2.5">\n              <input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 sm:text-sm sm:leading-6">\n            </div>\n          </div>\n          <div class="sm:col-span-2">\n            <label for="phone-number" class="block text-sm font-semibold leading-6 text-white">\n              ', '\n            </label>\n            <div class="mt-2.5">\n              <input type="tel" name="phone-number" id="phone-number" autocomplete="tel" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 sm:text-sm sm:leading-6">\n            </div>\n          </div>\n          <div class="sm:col-span-2">\n            <label for="message" class="block text-sm font-semibold leading-6 text-white">\n              ', '\n            </label>\n            <div class="mt-2.5">\n              <textarea name="message" id="message"', ' class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 sm:text-sm sm:leading-6"></textarea>\n            </div>\n          </div>\n        </div>\n        <div class="mt-8 flex justify-end">\n          <button type="submit" class="pointer-events-none border-2 opacity-60 border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white duration-500 px-3.5 py-2.5 text-center text-sm font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">\n            ', '\n          </button>\n        </div>\n      </div>\n    </form>\n  </div>\n</div>\n\n<script type="text/javascript">\nfunction UnCryptMailto(s) {\n  var n = 0;\n  var r = "";\n  for (var i = 0; i < s.length; i++) {\n    n = s.charCodeAt(i);\n    if (n >= 8364) {\n      n = 128;\n    }\n    r += String.fromCharCode(n - 1);\n  }\n  return r;\n}\n\nfunction linkTo_UnCryptMailto(s) {\n  location.href = UnCryptMailto(s);\n}\n<\/script>'])), maybeRenderHead($$result), addAttribute({
+          `, '\n        </ul>\n      </div>\n    </div>\n    <form action="#" method="POST" class="px-6 pb-10 pt-16 lg:px-8">\n      <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">\n        <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">\n          <div>\n            <label for="first-name" class="block text-sm font-semibold leading-6 text-white">\n              ', '\n            </label>\n            <div class="mt-2.5">\n              <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 sm:text-sm sm:leading-6">\n            </div>\n          </div>\n          <div>\n            <label for="last-name" class="block text-sm font-semibold leading-6 text-white">\n              ', '\n            </label>\n            <div class="mt-2.5">\n              <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 sm:text-sm sm:leading-6">\n            </div>\n          </div>\n          <div class="sm:col-span-2">\n            <label for="email" class="block text-sm font-semibold leading-6 text-white">\n              ', '\n            </label>\n            <div class="mt-2.5">\n              <input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 sm:text-sm sm:leading-6">\n            </div>\n          </div>\n          <div class="sm:col-span-2">\n            <label for="phone-number" class="block text-sm font-semibold leading-6 text-white">\n              ', '\n            </label>\n            <div class="mt-2.5">\n              <input type="tel" name="phone-number" id="phone-number" autocomplete="tel" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 sm:text-sm sm:leading-6">\n            </div>\n          </div>\n          <div class="sm:col-span-2">\n            <label for="message" class="block text-sm font-semibold leading-6 text-white">\n              ', '\n            </label>\n            <div class="mt-2.5">\n              <textarea name="message" id="message"', ' class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 sm:text-sm sm:leading-6"></textarea>\n            </div>\n          </div>\n        </div>\n        <div class="mt-8 flex justify-end">\n          <button type="submit" class="pointer-events-none border-2 opacity-60 border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white duration-500 px-3.5 py-2.5 text-center text-sm font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">\n            ', '\n          </button>\n        </div>\n      </div>\n    </form>\n  </div>\n</div>\n\n<script type="text/javascript">\nfunction UnCryptMailto(s) {\n  var n = 0;\n  var r = "";\n  for (var i = 0; i < s.length; i++) {\n    n = s.charCodeAt(i);\n    if (n >= 8364) {\n      n = 128;\n    }\n    r += String.fromCharCode(n - 1);\n  }\n  return r;\n}\n\nfunction linkTo_UnCryptMailto(s) {\n  location.href = UnCryptMailto(s);\n}\n<\/script>'])), maybeRenderHead(), addAttribute({
     clipPath: "polygon(74.1% 56.1%, 100% 38.6%, 97.5% 73.3%, 85.5% 100%, 80.7% 98.2%, 72.5% 67.7%, 60.2% 37.8%, 52.4% 32.2%, 47.5% 41.9%, 45.2% 65.8%, 27.5% 23.5%, 0.1% 35.4%, 17.9% 0.1%, 27.6% 23.5%, 76.1% 2.6%, 74.1% 56.1%)"
   }, "style"), unescapeHTML(t(`contact.title`)), unescapeHTML(t(`contact.content`)), renderComponent($$result, "Icon", $$Icon, { "name": "ph:user-bold", "class": "h-6 w-6" }), t(`contact.name`), renderComponent($$result, "Icon", $$Icon, { "name": "octicon:location-16", "class": "h-6 w-6" }), t(`contact.address`), renderComponent($$result, "Icon", $$Icon, { "name": "ic:outline-phone", "class": "h-6 w-6" }), renderComponent($$result, "Icon", $$Icon, { "name": "ic:outline-mail", "class": "h-6 w-6" }), links.map((link) => renderTemplate`<li>
                 <a${addAttribute(`flex h-12 w-12 hover:opacity-60 items-center justify-center p-2 ${link.disable && "cursor-default hover:opacity-100 pointer-events-none opacity-50"}`, "class")}${addAttribute(link.url, "href")} target="_blank">
@@ -528,19 +528,19 @@ const $$Contact = createComponent(async ($$result, $$props, $$slots) => {
                   ${renderComponent($$result, "Icon", $$Icon, { "class": "h-full text-white", "name": link.icon })}
                 </a>
               </li>`), t(`contact.form first name`), t(`contact.form last name`), t(`contact.form email`), t(`contact.form phone`), t(`contact.form message`), addAttribute(4, "rows"), t(`contact.form send`));
-}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/Contact.astro");
+}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/Contact.astro", void 0);
 
 const $$Astro$c = createAstro("https://example.com");
 const $$Footer = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$c, $$props, $$slots);
   Astro2.self = $$Footer;
-  return renderTemplate`${maybeRenderHead($$result)}<footer class="relative w-full h-full px-4 bg-black">
+  return renderTemplate`${maybeRenderHead()}<footer class="relative w-full h-full px-4 bg-black">
   <!-- <Starfield id="starfieldFooter" canvas_id="starfieldFooterCanvas" /> -->
   <div class="relative w-full max-w-6xl flex justify-center py-20 m-auto">
     ${renderComponent($$result, "Contact", $$Contact, {})}
   </div>
 </footer>`;
-}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/Footer.astro");
+}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/Footer.astro", void 0);
 
 const SITE_TITLE = "ngquangvu";
 const SITE_DESCRIPTION = "Welcome to my website!";
@@ -550,28 +550,28 @@ const $$Starfield = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$b, $$props, $$slots);
   Astro2.self = $$Starfield;
   Astro2.props;
-  return renderTemplate`${maybeRenderHead($$result)}<div id="starfield" class="absolute inset-0">
+  return renderTemplate`${maybeRenderHead()}<div id="starfield" class="absolute inset-0">
     <canvas id="starfield-canvas"></canvas>
 </div>`;
-}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/Starfield.astro");
+}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/Starfield.astro", void 0);
 
 const $$Astro$a = createAstro("https://example.com");
 const $$GitCorner = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$a, $$props, $$slots);
   Astro2.self = $$GitCorner;
-  return renderTemplate`<!-- https://github.com/tholman/github-corners -->${maybeRenderHead($$result)}<a href="https://github.com/ngquangvu" aria-label="View source on GitHub" class="absolute right-0 top-0 z-10 text-black hover:text-black focus:ring-0 focus:ring-offset-0 astro-NCUVGWGS"><svg class="fill-white astro-NCUVGWGS" width="80" height="80" viewBox="0 0 250 250" aria-hidden="true">
+  return renderTemplate`<!-- https://github.com/tholman/github-corners -->${maybeRenderHead()}<a href="https://github.com/ngquangvu" aria-label="View source on GitHub" class="absolute right-0 top-0 z-10 text-black hover:text-black focus:ring-0 focus:ring-offset-0 astro-NCUVGWGS"><svg class="fill-white astro-NCUVGWGS" width="80" height="80" viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z" class="astro-NCUVGWGS"></path>
         <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm astro-NCUVGWGS"></path>
         <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body astro-NCUVGWGS"></path>
     </svg>
 </a>`;
-}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/GitCorner.astro");
+}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/GitCorner.astro", void 0);
 
 const $$Astro$9 = createAstro("https://example.com");
 const $$Splash = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$9, $$props, $$slots);
   Astro2.self = $$Splash;
-  return renderTemplate`${maybeRenderHead($$result)}<section class="relative h-screen min-h-[500px] bg-black astro-MLBAG6B5">
+  return renderTemplate`${maybeRenderHead()}<section class="relative h-screen min-h-[500px] bg-black astro-MLBAG6B5">
   ${renderComponent($$result, "Starfield", $$Starfield, { "id": "starfield", "canvas_id": "starfieldCanvas", "class": "astro-MLBAG6B5" })}
   ${renderComponent($$result, "GitHubCorner", $$GitCorner, { "class": "astro-MLBAG6B5" })}
   <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40 astro-MLBAG6B5"></div>
@@ -591,14 +591,14 @@ const $$Splash = createComponent(async ($$result, $$props, $$slots) => {
     }
   </style>
 </noscript>`;
-}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/Splash.astro");
+}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/Splash.astro", void 0);
 
 const $$Astro$8 = createAstro("https://example.com");
 const $$ContentSection = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$8, $$props, $$slots);
   Astro2.self = $$ContentSection;
   const { title, id } = Astro2.props;
-  return renderTemplate`${maybeRenderHead($$result)}<section${addAttribute(id, "id")} class="flex scroll-mt-24 flex-col items-center gap-4 space-y-3">
+  return renderTemplate`${maybeRenderHead()}<section${addAttribute(id, "id")} class="flex scroll-mt-24 flex-col items-center gap-4 space-y-3">
   <div class="flex flex-col items-center gap-4">
     ${renderSlot($$result, $$slots["eyebrow"])}
     <h2 class="gradient-text text-center font-extrabold tracking-tight text-4xl md:text-6xl leading-[1.15] md:leading-[1.3]">
@@ -610,7 +610,7 @@ const $$ContentSection = createComponent(async ($$result, $$props, $$slots) => {
   </p>
   ${renderSlot($$result, $$slots["default"])}
 </section>`;
-}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/ContentSection.astro");
+}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/ContentSection.astro", void 0);
 
 const $$Astro$7 = createAstro("https://example.com");
 const $$Intro = createComponent(async ($$result, $$props, $$slots) => {
@@ -620,7 +620,7 @@ const $$Intro = createComponent(async ($$result, $$props, $$slots) => {
   Astro2.props;
   return renderTemplate`${renderComponent($$result, "ContentSection", $$ContentSection, { "title": t(`intro.title`), "id": "about" }, { "default": ($$result2) => renderTemplate`
   
-  ${maybeRenderHead($$result2)}<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+  ${maybeRenderHead()}<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
     <a href="/" class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4">
       ${renderComponent($$result2, "Icon", $$Icon, { "name": "simple-icons:blogger", "class": "h-8 text-gray-800" })}
       <span>${t(`intro.read blog`)}</span>
@@ -631,7 +631,7 @@ const $$Intro = createComponent(async ($$result, $$props, $$slots) => {
     </a>
   </div>
 `, "lead": ($$result2) => renderTemplate`${renderComponent($$result2, "Fragment", Fragment, { "slot": "lead" }, { "default": ($$result3) => renderTemplate`${unescapeHTML(t(`intro.content`))}` })}` })}`;
-}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/Intro.astro");
+}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/Intro.astro", void 0);
 
 const $$Astro$6 = createAstro("https://example.com");
 const $$Skill = createComponent(async ($$result, $$props, $$slots) => {
@@ -677,7 +677,7 @@ const $$Skill = createComponent(async ($$result, $$props, $$slots) => {
   ];
   return renderTemplate`${renderComponent($$result, "ContentSection", $$ContentSection, { "title": t(`skill.title`), "id": "skills" }, { "default": ($$result2) => renderTemplate`
   
-  ${maybeRenderHead($$result2)}<ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+  ${maybeRenderHead()}<ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
     ${skills.map(({ title, description, icon }) => renderTemplate`<li class="flex flex-col items-center gap-4 border border-default bg-gray-50 p-6 -mt-[1px] -ml-[1px]">
           <div class="h-16 w-16 rounded-full border-2 border-current p-3">
             ${renderComponent($$result2, "Icon", $$Icon, { "name": icon })}
@@ -687,14 +687,14 @@ const $$Skill = createComponent(async ($$result, $$props, $$slots) => {
         </li>`)}
   </ul>
 `, "lead": ($$result2) => renderTemplate`${renderComponent($$result2, "Fragment", Fragment, { "slot": "lead" }, { "default": ($$result3) => renderTemplate`${unescapeHTML(t(`skill.content`))}` })}` })}`;
-}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/Skill.astro");
+}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/Skill.astro", void 0);
 
 const $$Astro$5 = createAstro("https://example.com");
 const $$UsableList = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$5, $$props, $$slots);
   Astro2.self = $$UsableList;
   const { items, title } = Astro2.props;
-  return renderTemplate`${maybeRenderHead($$result)}<div class="w-full max-w-6xl space-y-2">
+  return renderTemplate`${maybeRenderHead()}<div class="w-full max-w-6xl space-y-2">
   <div class="relative rounded-lg border border-default bg-gray-50 px-6 pb-4 pt-8">
     <h3 class="absolute right-4 top-0 -translate-y-1/2 rounded-full border border-current bg-white px-4 py-1 uppercase tracking-tight text-xs">
       ${title}
@@ -712,7 +712,7 @@ const $$UsableList = createComponent(async ($$result, $$props, $$slots) => {
     </ul>
   </div>
 </div>`;
-}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/UsableList.astro");
+}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/UsableList.astro", void 0);
 
 const $$Astro$4 = createAstro("https://example.com");
 const $$Usable = createComponent(async ($$result, $$props, $$slots) => {
@@ -875,14 +875,14 @@ const $$Usable = createComponent(async ($$result, $$props, $$slots) => {
   ${renderComponent($$result2, "UsableList", $$UsableList, { "items": frameworks, "title": t(`what i do.head 2`) })}
   ${renderComponent($$result2, "UsableList", $$UsableList, { "items": platforms, "title": t(`what i do.head 3`) })}
 `, "lead": ($$result2) => renderTemplate`${renderComponent($$result2, "Fragment", Fragment, { "slot": "lead" }, { "default": ($$result3) => renderTemplate`${unescapeHTML(t(`what i do.content`))}` })}` })}`;
-}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/Usable.astro");
+}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/Usable.astro", void 0);
 
 const $$Astro$3 = createAstro("https://example.com");
 const $$CustomerList = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$3, $$props, $$slots);
   Astro2.self = $$CustomerList;
   const { items, title } = Astro2.props;
-  return renderTemplate`${maybeRenderHead($$result)}<div class="w-full max-w-6xl space-y-2">
+  return renderTemplate`${maybeRenderHead()}<div class="w-full max-w-6xl space-y-2">
   <div class="relative rounded-lg border border-default bg-gray-50 px-6 pb-6 pt-8">
     <ul class="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-5">
       ${items.map((item) => renderTemplate`<li class="px-2 md:px-5 flex justify-center">
@@ -894,7 +894,7 @@ const $$CustomerList = createComponent(async ($$result, $$props, $$slots) => {
     </ul>
   </div>
 </div>`;
-}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/CustomerList.astro");
+}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/CustomerList.astro", void 0);
 
 const $$Astro$2 = createAstro("https://example.com");
 const $$Customer = createComponent(async ($$result, $$props, $$slots) => {
@@ -956,7 +956,7 @@ const $$Customer = createComponent(async ($$result, $$props, $$slots) => {
   
   ${renderComponent($$result2, "CustomerList", $$CustomerList, { "items": customers, "title": "Customers" })}
 `, "lead": ($$result2) => renderTemplate`${renderComponent($$result2, "Fragment", Fragment, { "slot": "lead" }, { "default": ($$result3) => renderTemplate`${unescapeHTML(t(`customers.content`))}` })}` })}`;
-}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/Customer.astro");
+}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/components/Customer.astro", void 0);
 
 var __freeze$1 = Object.freeze;
 var __defProp$1 = Object.defineProperty;
@@ -972,8 +972,8 @@ const $$Index$1 = createComponent(async ($$result, $$props, $$slots) => {
   const diffTime = Math.abs(today - firstWorkedDate);
   const diffDays = Math.ceil(diffTime / (1e3 * 60 * 60 * 24));
   const workedYear = (diffDays / 365).toFixed(1);
-  return renderTemplate(_a$1 || (_a$1 = __template$1(["<html", ">\n  <head>\n    ", "\n  ", '</head>\n  <body class="m-auto h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white">\n    <div class="relative">\n      ', "\n      ", '\n    </div>\n    <main class="py-20 px-4 md:px-8 flex flex-col space-y-28">\n      ', "\n      ", "\n      ", "\n      ", "\n      <!--<Showcase /> -->\n    </main>\n    ", '\n    <script src="/assets/js/index.js"><\/script>\n  </body>\n</html>'])), addAttribute(i18next.language, "lang"), renderComponent($$result, "BaseHead", $$BaseHead, { "title": SITE_TITLE, "description": SITE_DESCRIPTION }), renderHead($$result), renderComponent($$result, "Header", $$Header, {}), renderComponent($$result, "Splash", $$Splash, {}), renderComponent($$result, "Intro", $$Intro, { "workedYear": workedYear }), renderComponent($$result, "Skill", $$Skill, { "workedYear": workedYear }), renderComponent($$result, "Usable", $$Usable, {}), renderComponent($$result, "Customer", $$Customer, {}), renderComponent($$result, "Footer", $$Footer, {}));
-}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/pages/index.astro");
+  return renderTemplate(_a$1 || (_a$1 = __template$1(["<html", ">\n  <head>\n    ", "\n  ", '</head>\n  <body class="m-auto h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white">\n    <div class="relative">\n      ', "\n      ", '\n    </div>\n    <main class="py-20 px-4 md:px-8 flex flex-col space-y-28">\n      ', "\n      ", "\n      ", "\n      ", "\n      <!--<Showcase /> -->\n    </main>\n    ", '\n    <script src="/assets/js/index.js"><\/script>\n  </body>\n</html>'])), addAttribute(i18next.language, "lang"), renderComponent($$result, "BaseHead", $$BaseHead, { "title": SITE_TITLE, "description": SITE_DESCRIPTION }), renderHead(), renderComponent($$result, "Header", $$Header, {}), renderComponent($$result, "Splash", $$Splash, {}), renderComponent($$result, "Intro", $$Intro, { "workedYear": workedYear }), renderComponent($$result, "Skill", $$Skill, { "workedYear": workedYear }), renderComponent($$result, "Usable", $$Usable, {}), renderComponent($$result, "Customer", $$Customer, {}), renderComponent($$result, "Footer", $$Footer, {}));
+}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/pages/index.astro", void 0);
 
 const $$file$1 = "/Users/valky/Project/MyBlog/MyBlogFrontend/src/pages/index.astro";
 const $$url$1 = "";
@@ -999,8 +999,8 @@ const $$Index = createComponent(async ($$result, $$props, $$slots) => {
   const diffTime = Math.abs(today - firstWorkedDate);
   const diffDays = Math.ceil(diffTime / (1e3 * 60 * 60 * 24));
   const workedYear = (diffDays / 365).toFixed(1);
-  return renderTemplate(_a || (_a = __template(["<html", ">\n  <head>\n    ", "\n  ", '</head>\n  <body class="m-auto h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white">\n    <div class="relative">\n      ', "\n      ", '\n    </div>\n    <main class="py-20 px-4 md:px-8 flex flex-col space-y-28">\n      ', "\n      ", "\n      ", "\n      ", "\n      <!--<Showcase /> -->\n    </main>\n    ", '\n    <script src="/assets/js/index.js"><\/script>\n  </body>\n</html>'])), addAttribute(i18next.language, "lang"), renderComponent($$result, "BaseHead", $$BaseHead, { "title": SITE_TITLE, "description": SITE_DESCRIPTION }), renderHead($$result), renderComponent($$result, "Header", $$Header, {}), renderComponent($$result, "Splash", $$Splash, {}), renderComponent($$result, "Intro", $$Intro, { "workedYear": workedYear }), renderComponent($$result, "Skill", $$Skill, { "workedYear": workedYear }), renderComponent($$result, "Usable", $$Usable, {}), renderComponent($$result, "Customer", $$Customer, {}), renderComponent($$result, "Footer", $$Footer, {}));
-}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/pages/ja/index.astro");
+  return renderTemplate(_a || (_a = __template(["<html", ">\n  <head>\n    ", "\n  ", '</head>\n  <body class="m-auto h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white">\n    <div class="relative">\n      ', "\n      ", '\n    </div>\n    <main class="py-20 px-4 md:px-8 flex flex-col space-y-28">\n      ', "\n      ", "\n      ", "\n      ", "\n      <!--<Showcase /> -->\n    </main>\n    ", '\n    <script src="/assets/js/index.js"><\/script>\n  </body>\n</html>'])), addAttribute(i18next.language, "lang"), renderComponent($$result, "BaseHead", $$BaseHead, { "title": SITE_TITLE, "description": SITE_DESCRIPTION }), renderHead(), renderComponent($$result, "Header", $$Header, {}), renderComponent($$result, "Splash", $$Splash, {}), renderComponent($$result, "Intro", $$Intro, { "workedYear": workedYear }), renderComponent($$result, "Skill", $$Skill, { "workedYear": workedYear }), renderComponent($$result, "Usable", $$Usable, {}), renderComponent($$result, "Customer", $$Customer, {}), renderComponent($$result, "Footer", $$Footer, {}));
+}, "/Users/valky/Project/MyBlog/MyBlogFrontend/src/pages/ja/index.astro", void 0);
 
 const $$file = "/Users/valky/Project/MyBlog/MyBlogFrontend/src/pages/ja/index.astro";
 const $$url = "/ja";
