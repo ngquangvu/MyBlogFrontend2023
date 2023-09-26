@@ -1,0 +1,59 @@
+{
+  "header": {
+    "blog": "Blog",
+    "notion": "Notion",
+    "contact": "Contact",
+    "language": "Languages",
+    "about": "About"
+  },
+  "common": {},
+  "fv": "The boughs that bear most hang lowest",
+  "intro": {
+    "title": "Exploring My Journey",
+    "content": "Hi, I'm Quang Vu, a senior full-stack developer with 5.5 years of experience.<br/>Let's collaborate to create amazing web applications together!",
+    "read blog": "Read my Blogs (🪧)",
+    "read notion": "Read my Notion"
+  },
+  "skill": {
+    "title": "Skill",
+    "content": "After investing significant time in learning and working, I have acquired and nurtured essential skills",
+    "1 title": "Frontend Developer",
+    "1 content": "Specializing in HTML, CSS, and JavaScript, with expertise in frameworks for creating dynamic and responsive web applications",
+    "2 title": "Backend Developer",
+    "2 content": "Building and maintaining the server-side logic of web applications, handling data processing and system integration",
+    "3 title": "Unity Developer",
+    "3 content": "Specializing in creating and developing applications and games using the Unity game engine",
+    "4 title": "Leadership",
+    "4 content": "Take responsibility as a leader for 3.5 years, guiding and directing a development team to deliver high-quality software solutions",
+    "5 title": "Language",
+    "5 content": "Proficient in English and Japanese (JLPT N3) for effective communication in both languages",
+    "6 title": "Enthusiasm",
+    "6 content": "Igniting and empowering a team to deliver exceptional software solutions with passion and drive",
+    "7 title": "Sociability",
+    "7 content": "Building strong relationships, promotes collaboration, and creates a positive work environment through effective communication"
+  },
+  "what i do": {
+    "title": "What I do",
+    "content": "The programming languages, frameworks, and other tools that I can proficiently utilize",
+    "head 1": "LANGUAGES & DATABASES",
+    "head 2": "LIBRARY & FRAMEWORKS",
+    "head 3": "OTHERS"
+  },
+  "customers": {
+    "title": "Customers",
+    "content": "Many years of experience working with clients from prominent companies based in Japan"
+  },
+  "contact": {
+    "title": "Get in touch",
+    "content": "Feel free to reach out to me using the contact information below or by filling out the form",
+    "name": "Nguyen Quang Vu",
+    "address": "District 1, Ho Chi Minh city, Vietnam",
+    "phone": "<a href='tel:903306600'>+84 90 330 6600</a>",
+    "form first name": "First name",
+    "form last name": "Last name",
+    "form email": "Email",
+    "form phone": "Phone number",
+    "form message": "Message",
+    "form send": "Send message"
+  }
+}
